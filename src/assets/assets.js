@@ -37,6 +37,7 @@ import ruth from './Ruth.jpg'
 import njau from './Njau.jpg'
 import sheila from './Sheila.jpg'
 import twi from './Twiri.jpg'
+import echohero from './Echohero.png'
 
 export const company_logos = [
   gdihub,
@@ -78,7 +79,8 @@ const assets = {
   Lulu,
   Nena,
   safespace,
-  simulizi
+  simulizi,
+  echohero
 }
 
 export default assets
