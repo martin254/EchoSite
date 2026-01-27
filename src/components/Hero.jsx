@@ -16,7 +16,7 @@ const Hero = () => {
         >We work with communities across Kenya to remove communication barriers for people with speech impairments by using responsible AI to expand access to healthcare, education, and justice.</p>
 
         <div className='relative'>
-            <img src={assets.heroimage} alt='' className='w-full max-w-6xl rounded-4xl'/>
+            <img src={assets.echohero} alt='' className='w-full max-w-6xl rounded-4xl'/>
             <img src={assets.bgImage1} alt='' className='absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden'/>
         </div>
     </div>
