@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Partners from './components/partners'
+import Partners from './components/Partners'
 import Features from './components/Features'
 import OurWork from './components/OurWork'
 import Teams from './components/Teams'
