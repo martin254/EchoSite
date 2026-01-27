@@ -9,7 +9,7 @@ const Footer = ({theme}) => {
         <div className='space-y-5 text-sm text-gray-700 dark:text-gray-400'>
             <img src={theme === 'dark' ? assets.echodark : assets.echolight} className='w-32 sm:w-44' alt=''/>
             <p className='max-w-md'>
-                Inclusive communication, without barriers.
+                Inclusive communication without barriers.
             </p>
             <ul className='flex gap-8'>
                 <li>
