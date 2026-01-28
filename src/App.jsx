@@ -51,7 +51,7 @@ const App = () => {
       <Toaster />
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
-      <Partners />
+      <Partners theme={theme} />
       <Features />
       <OurWork />
       <Teams />
