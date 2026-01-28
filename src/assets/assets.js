@@ -38,13 +38,24 @@ import njau from './Njau.jpg'
 import sheila from './Sheila.jpg'
 import twi from './Twiri.jpg'
 import echohero from './Echohero.png'
+import gdidark from './gdihubdark.svg'
 
 export const company_logos = [
-  gdihub,
-  strathlogo,
-  senseshub,
-  
-
+  {
+    name: 'Global Disability Innovation Hub',
+    light: gdihub,        // used on light theme background
+    dark: gdidark    // used on dark theme background
+  },
+  {
+    name: 'Strathmore University',
+    light: strathlogo,
+    dark: strathlogo
+  },
+  {
+    name: 'Senses Hub',
+    light: senseshub,
+    dark: senseshub
+  }
 ]
 
 const assets = {
