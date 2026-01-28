@@ -7,7 +7,7 @@ const Footer = ({theme}) => {
        {/* footer top */} 
        <div className='flex justify-between lg:items-center max-lg:flex-col gap-10'>
         <div className='space-y-5 text-sm text-gray-700 dark:text-gray-400'>
-            <img src={theme === 'dark' ? assets.echodark : assets.echolight} className='w-32 sm:w-44' alt=''/>
+            <img src={theme === 'dark' ? assets.sautilogo : assets.sautilight} className='w-32 sm:w-44' alt=''/>
             <p className='max-w-md'>
                 Inclusive communication without barriers.
             </p>
