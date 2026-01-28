@@ -12,7 +12,7 @@ const Hero = () => {
             Everyone deserves to be <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'>understood.</span>
         </h1>
 
-        <p className='text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'
+        <p className='text-sm sm:text-lg font-medium text-black dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'
         >We work with communities across Kenya to remove communication barriers for people with speech impairments by using responsible AI to expand access to healthcare, education, and justice.</p>
 
         <div className='relative'>
