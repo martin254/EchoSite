@@ -9,11 +9,11 @@ const CBOFocusAreas = () => {
     },
     {
       title: "Safeguarding & Protection (SGBV focus)",
-      desc: "Survivor-centred support systems that enable safe disclosure, access to care and justice, and inclusive community response — grounded in autonomy, confidentiality, and informed consent.",
+      desc: "Survivor-centred support systems that enable safe disclosure, access to care and justice, and inclusive community response grounded in autonomy, confidentiality, and informed consent.",
     },
     {
       title: "Livelihoods & Economic Empowerment",
-      desc: "Inclusive pathways to skills, employment, entrepreneurship, and financial literacy — supporting long-term wellbeing, independence, and reintegration.",
+      desc: "Inclusive pathways to skills, employment, entrepreneurship, and financial literacy, supporting long-term wellbeing, independence, and reintegration.",
     },
     {
       title: "Safe Spaces & Service Quality",
@@ -56,3 +56,4 @@ const CBOFocusAreas = () => {
 }
 
 export default CBOFocusAreas
+
