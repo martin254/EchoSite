@@ -41,6 +41,8 @@ import echohero from './Echohero.png'
 import gdidark from './gdihubdark.svg'
 import strathdark from './strathdarkness.png'
 import cdlilight from './cdlilogo.svg'
+import sautilogo from './SautiYetuLogo.png'
+import sautilight from './SautiYetuLight.png'
 
 export const company_logos = [
   {
@@ -98,7 +100,9 @@ const assets = {
   Nena,
   safespace,
   simulizi,
-  echohero
+  echohero,
+  sautilogo,
+  sautilight
 }
 
 export default assets
