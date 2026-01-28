@@ -40,6 +40,7 @@ import twi from './Twiri.jpg'
 import echohero from './Echohero.png'
 import gdidark from './gdihubdark.svg'
 import strathdark from './strathdarkness.png'
+import cdlilight from './cdlilogo.svg'
 
 export const company_logos = [
   {
@@ -56,6 +57,11 @@ export const company_logos = [
     name: 'Senses Hub',
     light: senseshub,
     dark: senseshub
+  },
+  {
+    name: 'CDLI',
+    light: cdlilight,
+    dark: cdlilight
   }
 ]
 
