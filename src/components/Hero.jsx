@@ -9,11 +9,11 @@ const Hero = () => {
             <p className='text-xs font-medium'>Inclusive communication without barriers.</p>
         </div>
         <h1 className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-[95px] max-w-5xl'>
-            Everyone deserves to be <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'>understood.</span>
+            Everyone deserves to be heard <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'>— and understood.</span>
         </h1>
 
-        <p className='text-sm sm:text-lg font-medium text-black dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'
-        >We work with communities across Kenya to remove communication barriers for people with speech impairments by using responsible AI to expand access to healthcare, education, and justice.</p>
+       <p className='text-sm sm:text-lg font-medium text-black dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'
+        >We are Sauti Yetu Initiative — a Kenyan community-based organization building human-centred, ethical solutions that enable people with speech impairments to access services, protection, and opportunity without stigma or dependency.</p>
 
         <div className='relative'>
             <img src={assets.echohero} alt='' className='w-full max-w-6xl rounded-4xl'/>
