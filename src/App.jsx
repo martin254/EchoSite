@@ -8,6 +8,8 @@ import Teams from './components/Teams'
 import ContactUs from './components/ContactUs'
 import {Toaster} from 'react-hot-toast'
 import Footer from './components/Footer'
+import CBOOverview from "./components/CBOOverview"
+import CBOFocusAreas from "./components/CBOFocusAreas"
 
 const App = () => {
 
@@ -52,6 +54,8 @@ const App = () => {
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
       <Partners theme={theme} />
+      <CBOOverview />
+      <CBOFocusAreas />
       <Features />
       <OurWork />
       <Teams />
