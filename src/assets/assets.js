@@ -39,6 +39,7 @@ import sheila from './Sheila.jpg'
 import twi from './Twiri.jpg'
 import echohero from './Echohero.png'
 import gdidark from './gdihubdark.svg'
+import strathdark from './strathdarkness.png'
 
 export const company_logos = [
   {
@@ -49,7 +50,7 @@ export const company_logos = [
   {
     name: 'Strathmore University',
     light: strathlogo,
-    dark: strathlogo
+    dark: strathdark
   },
   {
     name: 'Senses Hub',
