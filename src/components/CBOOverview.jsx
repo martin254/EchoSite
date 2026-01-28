@@ -34,7 +34,7 @@ const CBOOverview = () => {
       />
       <Title
         title="What we do"
-        desc="Sauti Yetu Initiative is a community-based organization in Kenya building human-centred, ethical technology and community programs so communication is accessible to everyone — regardless of disability."
+        desc="Sauti Yetu Initiative is a community-based organization in Kenya building human-centred, ethical technology and community programs so communication is accessible to everyone regardless of disability."
       />
 
       {/* Short intro block */}
@@ -42,7 +42,7 @@ const CBOOverview = () => {
         <p className="text-sm sm:text-base leading-relaxed opacity-90">
           We address a critical and often overlooked barrier to inclusion: communication. Many people with speech
           impairments face exclusion from essential information, healthcare, protection mechanisms, education, and
-          economic opportunity — not because they lack ability, but because systems are not communication-friendly.
+          economic opportunity not because they lack ability, but because systems are not communication-friendly.
         </p>
 
         <div className="mt-5 grid grid-cols-1 md:grid-cols-3 gap-4">
