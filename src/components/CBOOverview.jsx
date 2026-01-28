@@ -1,5 +1,6 @@
 import React from "react"
 import Title from "./Title"
+import assets from '../assets/assets'
 
 const CBOOverview = () => {
   const highlights = [
@@ -26,6 +27,11 @@ const CBOOverview = () => {
       id="about-cbo"
       className="relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-20 text-gray-700 dark:text-white"
     >
+      <img
+        src={assets.bgImage2}
+        alt=""
+        className="absolute -top-110 -left-70 -z-1 dark:hidden"
+      />
       <Title
         title="What we do"
         desc="Sauti Yetu Initiative is a community-based organization in Kenya building human-centred, ethical technology and community programs so communication is accessible to everyone — regardless of disability."
@@ -81,3 +87,4 @@ const CBOOverview = () => {
 }
 
 export default CBOOverview
+
