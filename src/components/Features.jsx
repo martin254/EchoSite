@@ -48,7 +48,7 @@ const Features = () => {
       />
 
       {/* Feature cards */}
-      <div className="flex flex-col md:grid grid-cols-2 gap-6 w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl items-stretch">
         {featuresData.map((feature, index) => (
           <FeatureCard key={index} feature={feature} index={index} />
         ))}
