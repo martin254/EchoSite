@@ -30,16 +30,20 @@ const Partners = ({ theme }) => {
 
       {/* Strip */}
       <div
-        className="
-          relative overflow-hidden
-          rounded-3xl
-          border border-gray-200/70 dark:border-white/10
-          bg-white/60 dark:bg-white/5
-          backdrop-blur-xl
-          shadow-xl shadow-gray-100/70 dark:shadow-black/40
-          py-10
-        "
-      >
+  className="
+    relative overflow-hidden
+    rounded-3xl
+    border border-gray-200/70 dark:border-white/10
+    bg-white/60 dark:bg-white/5
+    backdrop-blur-xl
+    shadow-xl shadow-gray-100/70 dark:shadow-black/40
+    py-10
+    w-full
+    max-w-3xl md:max-w-4xl lg:max-w-5xl
+    mx-auto
+  "
+>
+
         {/* Fade edges */}
         <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-white/90 dark:from-black/60 to-transparent z-10" />
         <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-white/90 dark:from-black/60 to-transparent z-10" />
@@ -68,7 +72,9 @@ const Partners = ({ theme }) => {
         </div>
       </div>
 
-      
+      <p className="mt-6 text-center text-xs text-gray-400 dark:text-white/40">
+        Hover to pause
+      </p>
 
       {/* Animation */}
       <style>{`
