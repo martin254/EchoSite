@@ -68,9 +68,7 @@ const Partners = ({ theme }) => {
         </div>
       </div>
 
-      <p className="mt-6 text-center text-xs text-gray-400 dark:text-white/40">
-        Hover to pause
-      </p>
+      
 
       {/* Animation */}
       <style>{`
