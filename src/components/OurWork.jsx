@@ -79,14 +79,7 @@ const OurWork = () => {
                 {work.description}
               </p>
 
-              <div className="mt-4 flex items-center gap-2 text-sm font-medium text-primary">
-                <span className="group-hover:underline underline-offset-4">
-                  Learn more
-                </span>
-                <span className="transition-transform duration-300 group-hover:translate-x-1">
-                  →
-                </span>
-              </div>
+             
             </div>
           </div>
         ))}
