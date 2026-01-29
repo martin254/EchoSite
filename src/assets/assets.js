@@ -111,6 +111,6 @@ export const teamData = [
   { name: 'Collins Njau', title: 'Founder & Product Lead', image: njau ,linkedin:'https://www.linkedin.com/in/collins-njau-294831a7/' },
   { name: 'Ruth Kamau ', title: 'Programs Manager', image: ruth, linkedin:'https://www.linkedin.com/in/ruth-kamau-b07399127/' },
   { name: 'Sheila Odhiambo', title: 'Technical Advisor, Programs & MEL', image: sheila, linkedin:'https://www.linkedin.com/in/sheila-odhiambo/' },
-  { name: 'Martin Muru', title: 'AI Lead', image: twi, linkedin:'https://www.linkedin.com/in/martinmuru/' },
+  { name: 'Martin Muru', title: 'Principal AI Engineer', image: twi, linkedin:'https://www.linkedin.com/in/martinmuru/' },
  
 ]
