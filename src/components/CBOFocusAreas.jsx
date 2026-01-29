@@ -50,22 +50,10 @@ const CBOFocusAreas = () => {
         ))}
       </div>
 
-      {/* Extra program highlight */}
-      <div className="relative w-full max-w-6xl rounded-2xl border border-gray-200 dark:border-gray-700
-        bg-white dark:bg-gray-900/60
-        p-6 sm:p-8 shadow-sm"
-      >
-        <span className="absolute left-0 top-8 h-10 w-1 rounded-full bg-primary/70" />
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-          Voice to Work
-        </h3>
-        <p className="text-sm text-gray-600 dark:text-white/80 mt-2 leading-relaxed">
-          An inclusive livelihoods program supporting youth and adults with speech impairments to transition into work and entrepreneurship.
-          Participants use communication tools to express skills, build CVs and profiles, practise interviews, and communicate confidently with employers and clients.
-        </p>
-      </div>
+     
     </div>
   )
 }
 
 export default CBOFocusAreas
+
