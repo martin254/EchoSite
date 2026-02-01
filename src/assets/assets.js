@@ -43,6 +43,7 @@ import strathdark from './strathdarkness.png'
 import cdlilight from './cdlilogo.svg'
 import sautilogo from './SautiYetuLogo.png'
 import sautilight from './SautiYetuLight.png'
+import livelihods from './Livelihoods.png'
 
 export const company_logos = [
   {
@@ -102,7 +103,8 @@ const assets = {
   simulizi,
   echohero,
   sautilogo,
-  sautilight
+  sautilight,
+  livelihods
 }
 
 export default assets
