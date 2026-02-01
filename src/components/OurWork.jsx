@@ -26,11 +26,11 @@ const OurWork = () => {
       tag: "Safe Spaces",
     },
     {
-      title: "Simulizi : Inclusive oral storytelling for education",
+      title: "Voice to Work : Inclusive pathways to work and enterprise",
       description:
-        "An AI-powered storytelling platform that allows students with speech impairments to record stories in their own voices, transforming speech into coherent narratives while preserving emotion, identity, and creativity.",
-      image: assets.simulizi,
-      tag: "Education",
+        "An economic empowerment program supporting youth and adults with speech impairments—especially survivors of SGBV—to transition from education into safe, sustainable work and entrepreneurship. Powered by AI-enabled communication tools, Voice to Work removes barriers to training, employment, and income generation while building skills, confidence, and long-term economic independence.",
+      image: assets.livelihods,
+      tag: "Economic Empowerment",
     },
   ]
 
