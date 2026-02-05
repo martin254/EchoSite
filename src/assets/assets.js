@@ -1,6 +1,6 @@
 import logo from './logo.svg'
 import arrow_icon from './arrow_icon.svg'
-import group_profile from './Group.png'
+import group_profile from './Group2.png'
 import bgImage1 from './bgImage1.png'
 import bgImage2 from './bgImage2.png'
 import hero_img from './hero_img.png'
