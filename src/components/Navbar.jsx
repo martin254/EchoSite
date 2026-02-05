@@ -14,8 +14,9 @@ const Navbar = ({theme, setTheme}) => {
 
             <img src={assets.close_icon} alt='' className='w-5 absolute right-4 top-4 sm:hidden' onClick={()=> setSidebarOpen(false)}/>
             <a onClick={()=>setSidebarOpen(false)} href='#' className='sm:hover:border-b'>Home</a>
-            <a onClick={()=>setSidebarOpen(false)} href='#features' className='sm:hover:border-b'>About</a>
+            <a onClick={()=>setSidebarOpen(false)} href='#about-cbo' className='sm:hover:border-b'>About</a>
             <a onClick={()=>setSidebarOpen(false)} href='#our-work' className='sm:hover:border-b'>Our Projects</a>
+            <a onClick={()=>setSidebarOpen(false)} href='#our-work' className='sm:hover:border-b'>Team</a>
             <a onClick={()=>setSidebarOpen(false)} href='#contact-us' className='sm:hover:border-b'>Contact Us</a>
         </div>
 
