@@ -40,8 +40,9 @@ const Footer = ({ theme }) => {
 
           <ul className="flex gap-6 text-sm pt-2">
             <li><a href="#hero" className="hover:text-primary transition">Home</a></li>
-            <li><a href="#features" className="hover:text-primary transition">Features</a></li>
+            <li><a href="#about-cbo" className="hover:text-primary transition">About Us</a></li>
             <li><a href="#our-work" className="hover:text-primary transition">Projects</a></li>
+            <li><a href="#team" className="hover:text-primary transition">Team</a></li>
             <li><a href="#contact-us" className="hover:text-primary transition">Contact</a></li>
           </ul>
         </div>
@@ -87,7 +88,7 @@ const Footer = ({ theme }) => {
         </p>
 
         <div className="flex gap-4">
-          <a href="#" className="hover:opacity-100 transition">
+          <a href="https://www.linkedin.com/company/sauti-yetu-initiative/" className="hover:opacity-100 transition">
             <img src={assets.linkedin_icon} alt="LinkedIn" className="w-5" />
           </a>
           <a href="#" className="hover:opacity-100 transition">
