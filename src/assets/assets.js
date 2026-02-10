@@ -35,6 +35,7 @@ import safespace from './safespace.png'
 import simulizi from './simulizi.png'
 import ruth from './Ruth.jpg'
 import njau from './Njau.jpg'
+import daisy from './Daisy.jpg'
 import sheila from './Sheila.jpg'
 import twi from './Twiri.jpg'
 import echohero from './Echohero.png'
@@ -114,5 +115,6 @@ export const teamData = [
   { name: 'Ruth Kamau ', title: 'Founding Programmes Director', image: ruth, linkedin:'https://www.linkedin.com/in/ruth-kamau-b07399127/' },
   { name: 'Sheila Odhiambo', title: 'Technical Advisor, Programs & MEL', image: sheila, linkedin:'https://www.linkedin.com/in/sheila-odhiambo/' },
   { name: 'Martin Muru', title: 'Principal AI Engineer', image: twi, linkedin:'https://www.linkedin.com/in/martinmuru/' },
+  { name: 'Daisy Langat', title: 'Head of User Trust & Engagement', image: daisy, linkedin:'https://www.linkedin.com/in/daisy-lang-at-a37083147/' },
  
 ]
