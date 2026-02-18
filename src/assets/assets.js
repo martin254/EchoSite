@@ -43,7 +43,7 @@ import gdidark from './gdihubdark.svg'
 import strathdark from './strathdarkness.png'
 import cdlilight from './cdlilogo.svg'
 import sautilogo from './ISRIforDark.png'
-import sautilight from './ISRIforLight.png'
+import sautilight from './ISRIforLightbg.png'
 import livelihods from './Livelihoods.png'
 
 export const company_logos = [
