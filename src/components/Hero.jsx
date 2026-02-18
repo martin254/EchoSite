@@ -13,7 +13,7 @@ const Hero = () => {
         </h1>
 
        <p className='text-sm sm:text-lg font-medium text-black dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'
-        >We are Sauti Yetu Initiative — a Kenyan community-based organization building human-centred, ethical solutions that enable people with speech impairments to access services, protection, and opportunity without stigma or dependency.</p>
+        >Inclusive Speech Rights Initiative (ISRI) is a non-governmental organization based in Kenya, dedicated to developing human-centred and ethical solutions that empower people with speech impairments to access services, protection, and opportunities with dignity—free from stigma or dependency.</p>
 
         <div className='relative'>
             <img src={assets.echohero} alt='' className='w-full max-w-6xl rounded-4xl'/>
