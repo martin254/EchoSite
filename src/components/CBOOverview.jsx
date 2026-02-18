@@ -35,7 +35,7 @@ const CBOOverview = () => {
 
       <Title
         title="What we do"
-        desc="Sauti Yetu Initiative is a community-based organization in Kenya building human-centred, ethical technology and community programs so communication is accessible to everyone — regardless of disability."
+        desc="Inclusive Speech Rights Initiative (ISRI) is a non-governmental organization based in Kenya, dedicated to developing human-centred and ethical solutions that empower people with speech impairments to access services, protection, and opportunities with dignity—free from stigma or dependency."
       />
 
       {/* Intro block */}
@@ -103,3 +103,4 @@ const CBOOverview = () => {
 }
 
 export default CBOOverview
+
