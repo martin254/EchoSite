@@ -35,7 +35,7 @@ const CBOOverview = () => {
 
       <Title
         title="What we do"
-        desc="Inclusive Speech Rights Initiative (ISRI) is a non-governmental organization based in Kenya, dedicated to developing human-centred and ethical solutions that empower people with speech impairments to access services, protection, and opportunities with dignity—free from stigma or dependency."
+        desc="Inclusive Speech Rights Initiative (ISRI)"
       />
 
       {/* Intro block */}
