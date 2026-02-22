@@ -84,7 +84,7 @@ const Footer = ({ theme }) => {
       {/* Bottom */}
       <div className="flex flex-wrap items-center justify-between gap-4 text-xs opacity-60">
         <p>
-          © 2026 Sauti Yetu Initiative — All rights reserved.
+          © 2026 Inclusive Speech Rights Initiative — All rights reserved.
         </p>
 
         <div className="flex gap-4">
