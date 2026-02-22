@@ -66,7 +66,7 @@ const ContactUs = () => {
               <div>
                 <p className="text-sm font-medium">Email</p>
                 <p className="text-sm text-gray-600 dark:text-white/70">
-                  hello@sautiyetuinitiative.org
+                  hello@isrinitiative.org
                 </p>
               </div>
             </div>
