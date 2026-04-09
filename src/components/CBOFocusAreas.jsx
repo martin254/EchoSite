@@ -16,8 +16,12 @@ const CBOFocusAreas = () => {
       desc: "Inclusive pathways to skills, employment, entrepreneurship, and financial literacy — supporting long-term wellbeing, independence, and reintegration.",
     },
     {
-      title: "Safe Spaces & Service Quality",
-      desc: "Tech-enabled feedback and rating mechanisms for services such as health facilities, police desks, education providers, and shelters to strengthen accountability, responsiveness, and inclusion.",
+      title: "Safe Spaces & Mental Wellness",
+      desc: "Inclusive, communication-accessible mental wellness spaces where individuals with non-standard speech can express themselves, access psychosocial support, and engage in therapeutic processes — without being excluded by systems built only for standard communication.",
+    },
+    {
+      title: "Access to Quality Education",
+      desc: "Voice-first learning companions that enable students with speech impairments to ask questions, engage with curriculum content, and learn independently — without being excluded by systems built only for standard speech.",
     },
   ]
 

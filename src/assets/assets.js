@@ -45,6 +45,8 @@ import cdlilight from './cdlilogo.svg'
 import sautilogo from './ISRIforDark.png'
 import sautilight from './ISRIforLightbg.png'
 import livelihods from './Livelihoods.png'
+import AITutor from './AITutor.png'
+import mentalhealth from './mentalhealth.png'
 
 export const company_logos = [
   {
@@ -105,7 +107,9 @@ const assets = {
   echohero,
   sautilogo,
   sautilight,
-  livelihods
+  livelihods,
+  AITutor,
+  mentalhealth
 }
 
 export default assets

@@ -19,11 +19,18 @@ const OurWork = () => {
       tag: "Women’s Health",
     },
     {
-      title: "Safe Spaces : Accessibility-aware location discovery",
+      title: "Safe Spaces & Mental Wellness",
       description:
-        "An accessibility-first discovery feature that helps people with speech impairments identify supportive, disability-friendly spaces using community-driven ratings focused on communication and interaction needs.",
-      image: assets.safespace,
+        "Inclusive, communication-accessible mental wellness spaces where individuals with non-standard speech can express themselves, access psychosocial support, and engage in therapeutic processes — without being excluded by systems built only for standard communication.",
+      image: assets.mentalhealth,
       tag: "Safe Spaces",
+    },
+    {
+      title: "Echo Tutor : Access to quality education",
+      description:
+        "Voice-first learning companions that enable students with speech impairments to ask questions, engage with curriculum content, and learn independently — without being excluded by systems built only for standard speech.",
+      image: assets.AITutor,
+      tag: "Education Access",
     },
     {
       title: "Voice to Work : Inclusive pathways to work and enterprise",
