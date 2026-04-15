@@ -10,10 +10,12 @@ import {Toaster} from 'react-hot-toast'
 import Footer from './components/Footer'
 import CBOOverview from "./components/CBOOverview"
 import CBOFocusAreas from "./components/CBOFocusAreas"
+import EchoPage from "./components/EchoPage"
 
 const App = () => {
 
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light')
+  const [path, setPath] = useState(window.location.pathname)
 
   const dotRef = useRef(null)
   const outlineRef = useRef(null)
@@ -47,19 +49,36 @@ const App = () => {
       document.removeEventListener('mousemove', handleMouseMove)
     }
   },[])
+
+  useEffect(() => {
+    const handlePopState = () => setPath(window.location.pathname)
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
+
+  const isEchoPage = path === "/echo"
   
   return (
     <div className='dark:bg-black relative'>
       <Toaster />
       <Navbar theme={theme} setTheme={setTheme} />
-      <Hero />
-      <Partners theme={theme} />
-      <CBOOverview />
-      <CBOFocusAreas />
-      <Features />
-      <OurWork />
-      <Teams />
-      <ContactUs />
+      {isEchoPage ? (
+        <>
+          <EchoPage />
+          <ContactUs />
+        </>
+      ) : (
+        <>
+          <Hero />
+          <Partners theme={theme} />
+          <CBOOverview />
+          <CBOFocusAreas />
+          <Features />
+          <OurWork />
+          <Teams />
+          <ContactUs />
+        </>
+      )}
       <Footer theme={theme} />
 
       {/* Custom Cursor Ring*/}

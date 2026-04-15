@@ -47,6 +47,12 @@ import sautilight from './ISRIforLightbg.png'
 import livelihods from './Livelihoods.png'
 import AITutor from './AITutor.png'
 import mentalhealth from './mentalhealth.png'
+import echo2 from './echo2.png'
+
+export const audioExamples = {
+  beforeEcho: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2229996662&color=%235b5af7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false",
+  afterEcho: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2230010423&color=%235b5af7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
+}
 
 export const company_logos = [
   {
@@ -109,7 +115,8 @@ const assets = {
   sautilight,
   livelihods,
   AITutor,
-  mentalhealth
+  mentalhealth,
+  echo2
 }
 
 export default assets
