@@ -131,8 +131,8 @@ const steps = [
       id="echo"
       className="relative flex flex-col items-center px-4 sm:px-12 lg:px-24 xl:px-40 pt-14 text-gray-700 dark:text-white overflow-x-clip"
     >
-      <div className="pointer-events-none absolute -top-24 -left-24 h-80 w-80 rounded-full bg-primary/20 blur-[90px]" />
-      <div className="pointer-events-none absolute top-32 -right-20 h-96 w-96 rounded-full bg-blue-400/20 blur-[110px]" />
+      <div className="pointer-events-none absolute -top-24 left-0 h-80 w-80 rounded-full bg-primary/20 blur-[90px]" />
+      <div className="pointer-events-none absolute top-32 right-0 h-96 w-96 rounded-full bg-blue-400/20 blur-[110px]" />
 
       <section className="w-full max-w-6xl">
         <div className="flex flex-col items-center text-center gap-4 sm:gap-5">
@@ -183,7 +183,7 @@ need it most.
       >
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-start">
           <div className="relative flex flex-col lg:pr-4 rounded-[2.25rem] border border-gray-200/80 dark:border-gray-700/80 bg-white/60 dark:bg-gray-900/30 backdrop-blur-2xl shadow-[0_24px_80px_rgba(15,23,42,0.08)] p-6 sm:p-7 lg:p-8 overflow-hidden">
-            <div className="pointer-events-none absolute -top-20 -left-16 h-44 w-44 rounded-full bg-primary/10 blur-3xl" />
+            <div className="pointer-events-none absolute -top-20 left-0 h-44 w-44 rounded-full bg-primary/10 blur-3xl" />
             <div className="pointer-events-none absolute top-20 right-0 h-52 w-52 rounded-full bg-blue-400/10 blur-3xl" />
 
             <div className="mb-10 relative z-10">
@@ -231,17 +231,11 @@ need it most.
             ))}
           </div>
 
-          <div className="lg:sticky lg:top-20 lg:self-start lg:justify-self-end">
-            <div className="relative w-full lg:w-[290px] xl:w-[320px] mx-auto lg:mx-0 aspect-[9/17.1] rounded-[3rem] bg-gradient-to-br from-[#f7f7f8] via-[#ececee] to-[#d9dade] p-[9px] shadow-[0_55px_140px_rgba(15,23,42,0.32)] transform-gpu lg:[transform:perspective(1200px)_rotateY(-4deg)_rotateX(1deg)_translateZ(0)] lg:origin-center transition-transform duration-500">
+          <div className="lg:sticky lg:top-20 lg:self-start">
+            <div className="relative w-full lg:w-[290px] xl:w-[320px] mx-auto lg:mx-0 aspect-[9/17.1] rounded-[3rem] bg-gradient-to-br from-[#f7f7f8] via-[#ececee] to-[#d9dade] p-[9px] shadow-[0_55px_140px_rgba(15,23,42,0.32)]">
               <div className="pointer-events-none absolute -bottom-7 left-1/2 h-10 w-[86%] -translate-x-1/2 rounded-full bg-black/18 blur-3xl" />
-              <div
-                className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-primary/18 blur-[80px] z-0"
-                style={{ transform: `translateY(${progress * 30}px)` }}
-              />
-              <div
-                className="pointer-events-none absolute top-16 right-8 h-56 w-56 rounded-full bg-blue-400/15 blur-[100px] z-0"
-                style={{ transform: `translateY(${progress * -35}px)` }}
-              />
+              <div className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-primary/18 blur-[80px] z-0" />
+              <div className="pointer-events-none absolute top-16 right-8 h-56 w-56 rounded-full bg-blue-400/15 blur-[100px] z-0" />
               <div className="absolute inset-[9px] rounded-[2.7rem] bg-gradient-to-br from-[#1a1a1c] via-[#101013] to-[#232326] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),inset_0_-24px_40px_rgba(0,0,0,0.45)] z-0" />
               <div className="absolute inset-[12px] rounded-[2.5rem] border border-white/12 z-10" />
 

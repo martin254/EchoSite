@@ -49,10 +49,10 @@ const OurWork = () => {
   return (
     <div
       id="our-work"
-      className="relative flex flex-col items-center gap-10 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white"
+      className="relative flex flex-col items-center gap-10 px-4 sm:px-12 lg:px-24 xl:px-40 pt-30 text-gray-700 dark:text-white overflow-hidden"
     >
-      <div className="pointer-events-none absolute -top-20 -left-32 h-72 w-72 rounded-full bg-primary/10 blur-[90px] -translate-x-10" />
-      <div className="pointer-events-none absolute top-60 -right-32 h-56 w-56 rounded-full bg-blue-400/10 blur-[70px] translate-x-10" />
+      <div className="pointer-events-none absolute -top-20 left-0 h-72 w-72 rounded-full bg-primary/10 blur-[90px]" />
+      <div className="pointer-events-none absolute top-60 right-0 h-56 w-56 rounded-full bg-blue-400/10 blur-[70px]" />
 
       <Title
         title="Our Projects"

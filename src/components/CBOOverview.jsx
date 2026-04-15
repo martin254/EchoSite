@@ -25,10 +25,10 @@ const CBOOverview = () => {
   return (
     <div
       id="about-cbo"
-      className="relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-20 text-gray-700 dark:text-white"
+      className="relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 pt-20 text-gray-700 dark:text-white overflow-hidden"
     >
-      <div className="pointer-events-none absolute -top-20 -left-40 h-80 w-80 rounded-full bg-primary/10 blur-[100px]" />
-      <div className="pointer-events-none absolute top-40 -right-20 h-64 w-64 rounded-full bg-blue-400/10 blur-[80px]" />
+      <div className="pointer-events-none absolute -top-20 left-0 h-80 w-80 rounded-full bg-primary/10 blur-[100px]" />
+      <div className="pointer-events-none absolute top-40 right-0 h-64 w-64 rounded-full bg-blue-400/10 blur-[80px]" />
 
       <Title
         title="What we do"
