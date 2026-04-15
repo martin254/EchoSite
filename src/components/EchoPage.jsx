@@ -281,8 +281,8 @@ need it most.
             An experience that adapts to every voice
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 dark:text-white/75 max-w-2xl mx-auto">
-            A simpler version for smaller screens. Each step stays readable and the
-            screenshots remain easy to view while scrolling.
+            Scroll to move through Echo's onboarding. Each step is designed to feel calm,
+            guided, and personal rather than busy or technical.
           </p>
         </div>
 
