@@ -58,8 +58,8 @@ const App = () => {
 
   const isEchoPage = path === "/echo"
   
-  return (
-    <div className='dark:bg-black relative'>
+return (
+    <div className='dark:bg-black relative overflow-x-hidden'>
       <Toaster />
       <Navbar theme={theme} setTheme={setTheme} />
       {isEchoPage ? (

@@ -1,14 +1,16 @@
 import React, { useRef, useState } from 'react'
 
-const FeatureCard = ({ feature }) => {
+const FeatureCard = ({ feature, index }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [visible, setVisible] = useState(false)
 
   const divRef = useRef(null)
 
   const handleMouseMove = (e) => {
-    const bounds = divRef.current.getBoundingClientRect()
-    setPosition({ x: e.clientX - bounds.left, y: e.clientY - bounds.top })
+    if (divRef.current) {
+      const bounds = divRef.current.getBoundingClientRect()
+      setPosition({ x: e.clientX - bounds.left, y: e.clientY - bounds.top })
+    }
   }
 
   return (
@@ -20,45 +22,36 @@ const FeatureCard = ({ feature }) => {
       className="
         relative overflow-hidden
         w-full h-full
-        rounded-xl
-        border border-gray-200 dark:border-amber-700/60
-        shadow-2xl shadow-gray-100 dark:shadow-white/10
-        bg-white dark:bg-gray-900
-        transition-transform duration-300
-        hover:-translate-y-1
+        rounded-2xl
+        border border-gray-200/60 dark:border-gray-700/50
+        bg-white dark:bg-gray-900/40
+        transition-all duration-500
+        hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1
       "
     >
-      {/* glow */}
       <div
         className={`
-          pointer-events-none blur-2xl rounded-full
-          bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500
-          w-[320px] h-[320px]
-          absolute z-0 transition-opacity duration-500
-          mix-blend-lighten
-          ${visible ? 'opacity-70' : 'opacity-0'}
+          pointer-events-none blur-3xl rounded-full
+          bg-gradient-to-r from-primary/20 via-purple-500/20 to-blue-500/20
+          w-[400px] h-[400px]
+          absolute z-0 transition-opacity duration-700
+          ${visible ? 'opacity-100' : 'opacity-0'}
         `}
-        style={{ top: position.y - 160, left: position.x - 160 }}
+        style={{ top: position.y - 200, left: position.x - 200 }}
       />
 
-      {/* content */}
-      <div className="relative z-10 flex items-start gap-6 p-8">
-        <div className="shrink-0 rounded-full bg-gray-100 dark:bg-gray-700 p-2">
-          <img
-            src={feature.icon}
-            alt=""
-            className="w-14 h-14 rounded-full bg-white dark:bg-gray-900"
-          />
-        </div>
-
-        <div className="flex-1">
-          <h3 className="font-semibold text-base sm:text-lg leading-snug">
+      <div className="relative z-10 p-6 sm:p-7">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-purple-500/10 flex items-center justify-center">
+            <span className="text-2xl font-semibold text-primary">{index + 1}</span>
+          </div>
+          <h3 className="font-semibold text-lg sm:text-xl text-gray-900 dark:text-white">
             {feature.title}
           </h3>
-          <p className="text-sm mt-2 opacity-70 leading-relaxed">
-            {feature.description}
-          </p>
         </div>
+        <p className="text-sm sm:text-base text-gray-600 dark:text-white/70 leading-relaxed pl-16">
+          {feature.description}
+        </p>
       </div>
     </div>
   )

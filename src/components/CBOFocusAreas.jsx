@@ -28,36 +28,41 @@ const CBOFocusAreas = () => {
   return (
     <div
       id="focus-areas"
-      className="flex flex-col items-center gap-8 px-4 sm:px-12 lg:px-24 xl:px-40 pt-16 text-gray-700 dark:text-white"
+      className="relative flex flex-col items-center gap-8 px-4 sm:px-12 lg:px-24 xl:px-40 pt-16 text-gray-700 dark:text-white"
     >
+      <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-primary/10 blur-[80px]" />
+      <div className="pointer-events-none absolute -top-10 right-20 h-48 w-48 rounded-full bg-blue-400/10 blur-[60px]" />
+
       <Title
         title="Our focus areas"
         desc="We build solution products and community-embedded programs across protection, health, education, and economic inclusion."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full max-w-6xl">
         {areas.map((a, idx) => (
           <div
             key={idx}
-            className="relative h-full rounded-2xl border border-gray-200 dark:border-gray-700
-              bg-white dark:bg-gray-900/60
-              p-6 shadow-sm hover:shadow-md transition-all"
+            className="group relative h-full rounded-2xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/40 p-6 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-500"
           >
-            <span className="absolute left-0 top-6 h-8 w-1 rounded-full bg-primary/70" />
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white">
-              {a.title}
-            </h3>
-            <p className="text-sm text-gray-600 dark:text-white/80 mt-2 leading-relaxed">
-              {a.desc}
-            </p>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="relative z-10 flex gap-4">
+              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                <span className="text-lg font-semibold text-primary">{idx + 1}</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  {a.title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-white/70 leading-relaxed">
+                  {a.desc}
+                </p>
+              </div>
+            </div>
           </div>
         ))}
       </div>
-
-     
     </div>
   )
 }
 
 export default CBOFocusAreas
-
