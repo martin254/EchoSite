@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react"
 import assets, { audioExamples } from "../assets/assets"
 
 const EchoPage = () => {
-  const frameCount = 7
+  const frameCount = 8
   const [ready, setReady] = useState(false)
   const [currentFrame, setCurrentFrame] = useState(0)
   const [progress, setProgress] = useState(0)
@@ -10,12 +10,12 @@ const EchoPage = () => {
   const sectionRef = useRef(null)
   const imagesRef = useRef([])
 
-  const steps = [
+const steps = [
     {
       badge: "01",
       title: " Why This Matters (Personalisation overview)",
       desc:
-        "Echo’s personalisation starts with a simple fact: generic speech recognition understands only about 30% of what you say. By recording 500 short phrases, Echo builds a voice model tailored to your unique speech patterns. After this training, most people are understood correctly on the first try  up to 80% accuracy. Your recordings are never shared and are used only to improve how Echo recognises you.",
+        "Echo's personalisation starts with a simple fact: generic speech recognition understands only about 30% of what you say. By recording 500 short phrases, Echo builds a voice model tailored to your unique speech patterns. After this training, most people are understood correctly on the first try  up to 80% accuracy. Your recordings are never shared and are used only to improve how Echo recognises you.",
       frame: 0,
     },
     {
@@ -41,24 +41,30 @@ const EchoPage = () => {
     },
     {
       badge: "05",
-      title: "Train Your Personal Model",
-      desc:
-        "Once you've completed the phrases, Echo gets to work. Our AI—built on Whisper and fine-tuned with Kenyan non-standard speech—creates a personalized model just for you. You'll see your training status, total samples collected, and languages trained (Swahili and English).",
+      title: "Teach Echo What Matters to You with custom phrases",
+      desc: "Don't just train a voice model—build one that fits your daily life. Add custom phrases you use on the job, in class, or with family. Echo locks onto them during training, so your personal model understands you perfectly in the contexts that matter most.",
       frame: 4,
     },
     {
       badge: "06",
-      title: "Activate & Select Language",
+      title: "Train Your Personalized Model",
       desc:
-        "Your personal voice model is now active. Choose your preferred language—Swahili, English, or both—and start using Echo. The app will confirm your voice is ready, and you can begin speaking naturally, just as you would in everyday conversation.",
+        "Once you've completed the phrases, Echo gets to work. Our AI—built on Whisper and fine-tuned with Kenyan non-standard speech—creates a personalized model just for you. You'll see your training status, total samples collected, and languages trained (Swahili and English).",
       frame: 5,
     },
     {
       badge: "07",
+      title: "Activate & Select Language",
+      desc:
+        "Your personal voice model is now active. Choose your preferred language—Swahili, English, or both—and start using Echo. The app will confirm your voice is ready, and you can begin speaking naturally, just as you would in everyday conversation.",
+      frame: 6,
+    },
+    {
+      badge: "08",
       title: "Test, Correct & Generate Audio",
       desc:
         "Speak naturally, and Echo will show you exactly what it understood. You can tap to edit any transcription, then generate clear, amplified audio from your speech. This step confirms that Echo truly understands you—without struggle or repetition.",
-      frame: 6,
+      frame: 7,
     },
   ]
 
@@ -248,11 +254,11 @@ need it most.
               <div className="absolute top-[13px] left-1/2 -translate-x-1/2 h-5 w-20 rounded-full bg-black/95 z-20" />
 
               <div className="absolute inset-[18px] rounded-[2.05rem] overflow-hidden z-20 bg-[#f7f5f0] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.35)]">
-                <div className="h-full w-full">
+                <div className="h-full w-full p-1">
                   <img
                     src={imgError ? assets.echohero : frameSrc}
                     alt={`Echo onboarding frame ${currentFrame + 1}`}
-                    className="h-full w-full object-contain object-top transition-opacity duration-500"
+                    className="h-full w-full object-contain transition-opacity duration-500"
                     key={frameSrc}
                     onError={() => setImgError(true)}
                     onLoad={() => setImgError(false)}
@@ -309,11 +315,13 @@ need it most.
                   <div className="absolute inset-[9px] rounded-[1.95rem] border border-white/10" />
                   <div className="absolute top-[9px] left-1/2 -translate-x-1/2 h-5 w-16 rounded-full bg-black z-20" />
                   <div className="absolute inset-[15px] rounded-[1.65rem] overflow-hidden bg-[#f7f5f0]">
-                    <img
-                      src={framePath(step.frame)}
-                      alt={`${step.title} preview`}
-                      className="h-full w-full object-contain object-top"
-                    />
+                    <div className="h-full w-full p-0.5">
+                      <img
+                        src={framePath(step.frame)}
+                        alt={`${step.title} preview`}
+                        className="h-full w-full object-contain"
+                      />
+                    </div>
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-white/15" />
                   </div>
                 </div>
@@ -335,57 +343,66 @@ need it most.
                 See Echo in action
               </h2>
               <p className="text-base sm:text-lg mt-4 max-w-xl mx-auto text-gray-600 dark:text-white/70 leading-relaxed">
-                Compare the same speaker before and after Echo — clarity improves while identity and intent are preserved.
+                Compare speakers before and after Echo — clarity improves while identity and intent are preserved.
               </p>
               
-              <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl mx-auto">
-                <div className="group relative bg-white dark:bg-gray-800/50 border border-gray-200/80 dark:border-gray-700/60 rounded-2xl p-5 shadow-lg shadow-gray-200/50 dark:shadow-none hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
-                        <svg className="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                      </div>
-                      <h4 className="font-semibold text-lg text-gray-900 dark:text-white">Before Echo</h4>
+              <div className="mt-10 max-w-5xl mx-auto space-y-10">
+                {Object.entries(audioExamples).map(([key, user]) => (
+                  <div key={key} className="relative">
+                    <div className="text-center mb-4">
+                      <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium">{user.label}</span>
                     </div>
-                    <p className="text-sm text-gray-500 dark:text-white/50 mb-4">Natural speech from a user with a pronounced stutter, before Echo is applied.</p>
-                    <div className="rounded-xl overflow-hidden shadow-inner">
-                      <iframe
-                        title="Before Echo"
-                        width="100%"
-                        height="90"
-                        scrolling="no"
-                        frameBorder="no"
-                        allow="autoplay"
-                        src={audioExamples.beforeEcho}
-                      />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="group relative bg-white dark:bg-gray-800/50 border border-gray-200/80 dark:border-gray-700/60 rounded-2xl p-5 shadow-lg shadow-gray-200/50 dark:shadow-none hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="relative z-10">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-9 h-9 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+                              <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                            <h4 className="font-semibold text-lg text-gray-900 dark:text-white">Before Echo</h4>
+                          </div>
+                          <p className="text-sm text-gray-500 dark:text-white/50 mb-4">Natural speech before Echo is applied.</p>
+                          <div className="rounded-xl overflow-hidden shadow-inner bg-gray-100 dark:bg-gray-900">
+                            <iframe
+                              title={`${user.label} Before Echo`}
+                              width="100%"
+                              height="116"
+                              scrolling="no"
+                              frameBorder="no"
+                              allow="autoplay"
+                              src={user.before}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="group relative bg-white dark:bg-gray-800/50 border border-gray-200/80 dark:border-gray-700/60 rounded-2xl p-5 shadow-lg shadow-gray-200/50 dark:shadow-none hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="relative z-10">
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-9 h-9 rounded-full bg-primary/20 flex items-center justify-center">
+                              <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                            <h4 className="font-semibold text-lg text-gray-900 dark:text-white">With Echo</h4>
+                          </div>
+                          <p className="text-sm text-gray-500 dark:text-white/50 mb-4">Message preserved and voice clarified.</p>
+                          <div className="rounded-xl overflow-hidden shadow-inner bg-gray-100 dark:bg-gray-900">
+                            <iframe
+                              title={`${user.label} With Echo`}
+                              width="100%"
+                              height="116"
+                              scrolling="no"
+                              frameBorder="no"
+                              allow="autoplay"
+                              src={user.after}
+                            />
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                
-                <div className="group relative bg-white dark:bg-gray-800/50 border border-gray-200/80 dark:border-gray-700/60 rounded-2xl p-5 shadow-lg shadow-gray-200/50 dark:shadow-none hover:shadow-xl hover:shadow-primary/10 transition-all duration-500 hover:-translate-y-1">
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                  <div className="relative z-10">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                        <svg className="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                      </div>
-                      <h4 className="font-semibold text-lg text-gray-900 dark:text-white">With Echo</h4>
-                    </div>
-                    <p className="text-sm text-gray-500 dark:text-white/50 mb-4">The same user using Echo — message preserved and voice clarified.</p>
-                    <div className="rounded-xl overflow-hidden shadow-inner">
-                      <iframe
-                        title="With Echo"
-                        width="100%"
-                        height="90"
-                        scrolling="no"
-                        frameBorder="no"
-                        allow="autoplay"
-                        src={audioExamples.afterEcho}
-                      />
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="mt-8">

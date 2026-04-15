@@ -50,8 +50,16 @@ import mentalhealth from './mentalhealth.png'
 import echo2 from './Echo2.png'
 
 export const audioExamples = {
-  beforeEcho: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2229996662&color=%235b5af7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false",
-  afterEcho: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2230010423&color=%235b5af7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
+  user1: {
+    label: "User 1 — Stammer",
+    before: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2229996662&color=%235b5af7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false",
+    after: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%3Atracks%3A2230010423&color=%235b5af7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
+  },
+  user2: {
+    label: "User 2 — Cerebral Palsy",
+    before: "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/collins-njau-544503538/echo_sample_2_before_echo&color=%235b5af7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false",
+    after: "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/collins-njau-544503538/echo_sample_after_echo&color=%235b5af7&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false&visual=false"
+  }
 }
 
 export const company_logos = [
