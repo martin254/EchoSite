@@ -232,7 +232,7 @@ need it most.
           </div>
 
           <div className="lg:sticky lg:top-20 lg:self-start">
-            <div className="relative w-full lg:w-[290px] xl:w-[320px] mx-auto lg:mx-0 aspect-[9/17.1] rounded-[3rem] bg-gradient-to-br from-[#f7f7f8] via-[#ececee] to-[#d9dade] p-[9px] shadow-[0_55px_140px_rgba(15,23,42,0.32)]">
+            <div className="relative w-full lg:w-[290px] xl:w-[320px] ml-auto aspect-[9/17.1] rounded-[3rem] bg-gradient-to-br from-[#f7f7f8] via-[#ececee] to-[#d9dade] p-[9px] shadow-[0_55px_140px_rgba(15,23,42,0.32)]">
               <div className="pointer-events-none absolute -bottom-7 left-1/2 h-10 w-[86%] -translate-x-1/2 rounded-full bg-black/18 blur-3xl" />
               <div className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-primary/18 blur-[80px] z-0" />
               <div className="pointer-events-none absolute top-16 right-8 h-56 w-56 rounded-full bg-blue-400/15 blur-[100px] z-0" />
