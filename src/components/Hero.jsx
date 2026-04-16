@@ -2,10 +2,10 @@ import React from 'react'
 import assets from '../assets/assets'
 
 const Hero = () => {
-  return (
+return (
     <div id='hero' className='flex flex-col items-center gap-6 py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white'>
         <div className='inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full'>
-            <img className='w-20' src={assets.group_profile} alt=''/>
+            <img className='w-20' src={assets.group_profile} alt='' loading="lazy"/>
             <p className='text-xs font-medium'>Inclusive communication without barriers.</p>
         </div>
         <h1 className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-[95px] max-w-5xl'>
@@ -13,11 +13,11 @@ const Hero = () => {
         </h1>
 
        <p className='text-sm sm:text-lg font-medium text-black dark:text-white/75 max-w-4/5 sm:max-w-lg pb-3'
-        >Inclusive Speech Rights Initiative (ISRI) is a non-governmental organization based in Kenya, dedicated to developing human-centred and ethical solutions that empower people with speech impairments to access services, protection, and opportunities with dignity—free from stigma or dependency.</p>
+         >Inclusive Speech Rights Initiative (ISRI) is a non-governmental organization based in Kenya, dedicated to developing human-centred and ethical solutions that empower people with speech impairments to access services, protection, and opportunities with dignity—free from stigma or dependency.</p>
 
         <div className='relative'>
-            <img src={assets.echohero} alt='' className='w-full max-w-6xl rounded-4xl'/>
-            <img src={assets.bgImage1} alt='' className='absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden'/>
+            <img src={assets.echohero} alt='' className='w-full max-w-6xl rounded-4xl' loading="lazy"/>
+            <img src={assets.bgImage1} alt='' className='absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden' loading="lazy"/>
         </div>
     </div>
   )

@@ -75,6 +75,7 @@ const OurWork = () => {
                 src={work.image}
                 alt={work.title}
                 className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.08]"
+                loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
               
