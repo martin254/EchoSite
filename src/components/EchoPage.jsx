@@ -49,7 +49,7 @@ const steps = [
       badge: "06",
       title: "Train Your Personalized Model",
       desc:
-        "Once you've completed the phrases, Echo gets to work. Our AI—built on Whisper and fine-tuned with Kenyan non-standard speech—creates a personalized model just for you. You'll see your training status, total samples collected, and languages trained (Swahili and English).",
+        "Once you've completed the phrases, Echo gets to work. Our ASR System—trained on Kenyan non-standard speech—creates a personalized model just for you. You'll see your training status, total samples collected, and languages trained (Swahili and English).",
       frame: 5,
     },
     {
