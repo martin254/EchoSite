@@ -42,7 +42,7 @@ const CBOFocusAreas = () => {
         {areas.map((a, idx) => (
           <div
             key={idx}
-            className="group relative h-full rounded-2xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/40 p-6 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-500"
+            className="group relative h-full rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 shadow-sm hover:shadow-xl hover:shadow-primary/15 hover:-translate-y-1 transition-all duration-500"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative z-10 flex gap-4">

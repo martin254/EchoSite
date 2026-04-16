@@ -42,7 +42,7 @@ const CBOOverview = () => {
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="relative group rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/40 p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-500">
+            <div className="relative group rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 shadow-sm hover:shadow-lg hover:shadow-primary/10 transition-all duration-500">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <p className="text-xs font-medium uppercase tracking-wider text-primary mb-3">
                 Vision
@@ -53,7 +53,7 @@ const CBOOverview = () => {
               </p>
             </div>
 
-            <div className="relative group rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/40 p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-500">
+            <div className="relative group rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 shadow-sm hover:shadow-lg hover:shadow-primary/10 transition-all duration-500">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <p className="text-xs font-medium uppercase tracking-wider text-primary mb-3">
                 Mission
@@ -64,7 +64,7 @@ const CBOOverview = () => {
               </p>
             </div>
 
-            <div className="relative group rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white/80 dark:bg-gray-800/40 p-5 hover:shadow-lg hover:shadow-primary/5 transition-all duration-500">
+            <div className="relative group rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-5 shadow-sm hover:shadow-lg hover:shadow-primary/10 transition-all duration-500">
               <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               <p className="text-xs font-medium uppercase tracking-wider text-primary mb-3">
                 Core Technology
@@ -82,7 +82,7 @@ const CBOOverview = () => {
         {highlights.map((item, idx) => (
           <div
             key={idx}
-            className="group relative h-full rounded-2xl border border-gray-200/60 dark:border-gray-700/50 bg-white dark:bg-gray-900/40 p-6 hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 transition-all duration-500"
+            className="group relative h-full rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 shadow-sm hover:shadow-xl hover:shadow-primary/15 hover:-translate-y-1 transition-all duration-500"
           >
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
             <div className="relative z-10">
