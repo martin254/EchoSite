@@ -15,55 +15,55 @@ const steps = [
       badge: "01",
       title: " Why This Matters (Personalisation overview)",
       desc:
-        "Echo's personalisation starts with a simple fact: generic speech recognition understands only about 30% of what you say. By recording 500 short phrases, Echo builds a voice model tailored to your unique speech patterns. After this training, most people are understood correctly on the first try  up to 80% accuracy. Your recordings are never shared and are used only to improve how Echo recognises you.",
+        "Most voice technology is built for “typical” speech. If your speech falls outside that, being understood can be frustrating—or impossible. Echo is different. It learns how you speak, so you can be understood more easily, more often, and with less effort over time. Your voice isn’t something to fix. It’s something to be recognised.",
       frame: 0,
     },
     {
       badge: "02",
       title: "Pick Your Language",
       desc:
-        "This step selects the acoustic and language model that Echo will train first. English and Swahili are currently available (more languages can be added later). Choosing your primary language ensures the system matches your phonemes, grammar, and common word sequences. Personalisation starts from the correct base model so that the 500 phrases you record fine‑tune the right one, not a mismatched one.",
+        "Choose the language you’re most comfortable speaking. Echo will adapt to how that language sounds when you speak it. You can always expand or switch languages later as your needs evolve.",
       frame: 1,
     },
     {
       badge: "03",
       title: "Prepare Your Recording Session",
       desc:
-        "Get ready to train Echo to understand your unique voice. We'll ask you to confirm that you're in a quiet space, understand how your voice data will be used, and agree to pace yourself—about 50 phrases per day. This ensures high-quality training without strain.",
+        "Before we begin, we’ll help you set up a comfortable recording environment.You’ll be guided to: Find a quiet space, Understand how your voice data is used and move at a pace that works for you. Everything is designed to fit your energy, not rush you.",
       frame: 2,
     },
     {
       badge: "04",
-      title: "Read Phrases Aloud",
+      title: "Speak Naturally",
       desc:
-        "You'll read a series of phrases aloud—around 500 in total—directly in the app. Echo listens to the acoustic patterns of your speech, whether you're speaking Swahili or English. Your progress saves automatically, so you can pause and pick up right where you left off.",
+        "You’ll be guided through a series of short, simple prompts. As you speak, Echo begins learning the unique patterns in your voice—your rhythm, your sounds, your way of forming words. You can pause anytime and continue whenever you’re ready.",
       frame: 3,
     },
     {
       badge: "05",
-      title: "Teach Echo What Matters to You with custom phrases",
-      desc: "Don't just train a voice model—build one that fits your daily life. Add custom phrases you use on the job, in class, or with family. Echo locks onto them during training, so your personal model understands you perfectly in the contexts that matter most.",
+      title: "Make It Personal",
+      desc: "Echo works best when it reflects your real life. Add words and phrases that matter to you — at school, at work, or at home — so your voice model understands you in the moments that count.",
       frame: 4,
     },
     {
       badge: "06",
-      title: "Train Your Personalized Model",
+      title: "Build Your Personalized Voice Model",
       desc:
-        "Once you've completed the phrases, Echo gets to work. Our ASR System—trained on Kenyan non-standard speech—creates a personalized model just for you. You'll see your training status, total samples collected, and languages trained (Swahili and English).",
+        "Once you’ve completed your sessions, Echo creates a voice model tailored specifically to you. This model is private, secure, and designed to improve how Echo understands your speech across different situations.",
       frame: 5,
     },
     {
       badge: "07",
       title: "Activate & Select Language",
       desc:
-        "Your personal voice model is now active. Choose your preferred language—Swahili, English, or both—and start using Echo. The app will confirm your voice is ready, and you can begin speaking naturally, just as you would in everyday conversation.",
+        "Your personalised voice model is now ready. Choose your preferred language and start speaking naturally. Echo is now tuned to your voice—not a generic one.",
       frame: 6,
     },
     {
       badge: "08",
-      title: "Test, Correct & Generate Audio",
+      title: "Speak, Refine, Be Heard",
       desc:
-        "Speak naturally, and Echo will show you exactly what it understood. You can tap to edit any transcription, then generate clear, amplified audio from your speech. This step confirms that Echo truly understands you—without struggle or repetition.",
+        "As you use Echo, you’ll see what it understands in real time. You can make quick corrections if needed, helping Echo align even more closely with how you speak. You can also generate clear, amplified audio—so your voice can be heard confidently in any setting.",
       frame: 7,
     },
   ]
