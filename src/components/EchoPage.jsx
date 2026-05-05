@@ -71,7 +71,10 @@ const steps = [
   const activeIndex = Math.min(steps.length - 1, Math.floor(progress * steps.length))
 
   const framePath = useMemo(
-    () => (index) => `/echo-seq/echo_${String(index + 1).padStart(4, "0")}.jpg`,
+    () => (index) => {
+        const extension = index === 0 ? 'jpeg' : 'jpg';
+        return `/echo-seq/echo_${String(index + 1).padStart(4, "0")}.${extension}`;
+    },
     []
   )
 
