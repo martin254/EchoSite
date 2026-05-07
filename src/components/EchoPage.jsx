@@ -6,11 +6,13 @@ const EchoPage = () => {
   const [ready, setReady] = useState(false)
   const [currentFrame, setCurrentFrame] = useState(0)
   const [progress, setProgress] = useState(0)
+  const [featureProgress, setFeatureProgress] = useState(0)
   const [imgError, setImgError] = useState(false)
   const sectionRef = useRef(null)
+  const featureSectionRef = useRef(null)
   const imagesRef = useRef([])
 
-const steps = [
+const steps = useMemo(() => [
     {
       badge: "01",
       title: " Why This Matters (Personalisation overview)",
@@ -66,9 +68,59 @@ const steps = [
         "As you use Echo, you’ll see what it understands in real time. You can make quick corrections if needed, helping Echo align even more closely with how you speak. You can also generate clear, amplified audio—so your voice can be heard confidently in any setting.",
       frame: 7,
     },
-  ]
+  ], [])
 
   const activeIndex = Math.min(steps.length - 1, Math.floor(progress * steps.length))
+  const featureFrames = useMemo(() => [
+    "/feature-seq/feature_0001.png",
+    "/feature-seq/feature_0002.png",
+    "/feature-seq/feature_0003.png",
+    "/feature-seq/feature_0004.png",
+    "/feature-seq/feature_0005.png",
+    "/feature-seq/feature_0006.png",
+  ], [])
+  const featureDetails = useMemo(() => [
+    {
+      label: "Feature 01",
+      title: "Saved Recordings Library",
+      desc:
+        "Every recording saved, searchable, and playable. A library of your voice that is never lost.",
+    },
+    {
+      label: "Feature 02",
+      title: "Voice Export",
+      desc:
+        "Export any recording as a voice note to WhatsApp, email, or any app. Voice notes, finally accessible.",
+    },
+    {
+      label: "Feature 03",
+      title: "Voice Cloning",
+      desc:
+        "Corrected transcript spoken back in the user's own voice; same identity, made clear.",
+    },
+    {
+      label: "Feature 04",
+      title: "Dictation Studio(My Thoughts)",
+      desc:
+        "My Thoughts is a voice-first thinking environment. Users speak freely; no prompts, no structure, and Echo transforms raw speech into clear, actionable output.",
+    },
+    {
+      label: "Feature 04",
+      title: "Dictation Studio",
+      desc:
+        "Raw transcript with word-level playback. Tap any word to correct it by voice.",
+    },
+    {
+      label: "Feature 04",
+      title: "Dictation Studio",
+      desc:
+        "Refine the Transcript with one tap. Turn speech into a message, plan, summary, or formal document.",
+    },
+  ], [])
+  const activeFeatureIndex = Math.min(
+    featureDetails.length - 1,
+    Math.round(featureProgress * (featureDetails.length - 1))
+  )
 
   const framePath = useMemo(
     () => (index) => {
@@ -125,7 +177,46 @@ const steps = [
     onScroll()
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => window.removeEventListener("scroll", onScroll)
-  }, [ready, steps.length])
+  }, [ready, steps])
+
+  useEffect(() => {
+    let ticking = false
+
+    const onScroll = () => {
+      if (ticking) return
+      ticking = true
+      window.requestAnimationFrame(() => {
+        const section = featureSectionRef.current
+        if (!section) {
+          ticking = false
+          return
+        }
+
+        if (window.innerWidth < 1024) {
+          setFeatureProgress(0)
+          ticking = false
+          return
+        }
+
+        const rect = section.getBoundingClientRect()
+        const scrollY = window.scrollY
+        const start = rect.top + scrollY
+        const end = start + section.offsetHeight - window.innerHeight
+        const rawProgress = end > start ? (scrollY - start) / (end - start) : 0
+        const clamped = Math.min(Math.max(rawProgress, 0), 1)
+        setFeatureProgress(clamped)
+        ticking = false
+      })
+    }
+
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    window.addEventListener("resize", onScroll)
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      window.removeEventListener("resize", onScroll)
+    }
+  }, [featureFrames.length])
 
   const frameSrc = framePath(currentFrame)
 
@@ -328,6 +419,127 @@ need it most.
         </div>
       </section>
 
+      {/* Features Section */}
+      <section
+        ref={featureSectionRef}
+        className="w-full max-w-6xl mt-16 lg:mt-8 mb-16 lg:min-h-[380vh]"
+      >
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="inline-block text-xs font-medium tracking-[0.2em] text-primary uppercase mb-3">
+            Features
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight">
+            Explore Echo's app experience
+          </h2>
+          <p className="text-base sm:text-lg mt-4 text-gray-600 dark:text-white/70 leading-relaxed">
+            A guided look at how Echo helps people capture speech, refine meaning,
+            and communicate with greater clarity.
+          </p>
+        </div>
+
+        <div className="hidden lg:grid mt-14 grid-cols-[minmax(0,0.9fr)_minmax(460px,1.1fr)] gap-12 items-start">
+          <div className="relative">
+            <div className="absolute left-[1.15rem] top-8 bottom-8 w-px bg-gradient-to-b from-primary/35 via-gray-200 to-gray-200 dark:via-gray-700 dark:to-gray-800" />
+            {featureDetails.map((feature, index) => (
+              <article
+                key={feature.label}
+                className="min-h-[58vh] flex items-center"
+              >
+                <div className="relative pl-12">
+                  <span
+                    className={`absolute left-0 top-2 flex h-9 w-9 items-center justify-center rounded-full border text-xs font-semibold transition-all duration-300 ${
+                      index === activeFeatureIndex
+                        ? "border-primary bg-primary text-white shadow-lg shadow-primary/25"
+                        : "border-gray-200 bg-white text-gray-400 dark:border-gray-700 dark:bg-gray-900 dark:text-white/45"
+                    }`}
+                  >
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div
+                    className={`rounded-lg border p-6 transition-all duration-500 ${
+                      index === activeFeatureIndex
+                        ? "border-primary/35 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.1)] dark:bg-gray-900/80 dark:shadow-none"
+                        : "border-gray-200/70 bg-white/65 opacity-55 dark:border-gray-800 dark:bg-gray-900/35"
+                    }`}
+                  >
+                    <span className="text-xs uppercase tracking-[0.24em] text-primary">
+                      {feature.label}
+                    </span>
+                    <h3 className="mt-3 text-2xl font-semibold text-gray-900 dark:text-white">
+                      {feature.title}
+                    </h3>
+                    <p className="mt-3 text-base text-gray-600 dark:text-white/72 leading-relaxed">
+                      {feature.desc}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="sticky top-24">
+            <div className="relative rounded-2xl border border-gray-200/80 bg-white/90 p-4 shadow-[0_34px_100px_rgba(15,23,42,0.12)] dark:border-gray-700/80 dark:bg-gray-900/75">
+              <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/10 via-transparent to-cyan-300/10 blur-2xl" />
+              <div className="flex items-center justify-between border-b border-gray-100 pb-3 dark:border-gray-800">
+                <div>
+                  <span className="text-xs uppercase tracking-[0.24em] text-primary">
+                    {featureDetails[activeFeatureIndex].label}
+                  </span>
+                  <h3 className="mt-1 text-lg font-semibold text-gray-900 dark:text-white">
+                    {featureDetails[activeFeatureIndex].title}
+                  </h3>
+                </div>
+                <div className="text-sm text-gray-400 dark:text-white/45">
+                  {activeFeatureIndex + 1}/{featureDetails.length}
+                </div>
+              </div>
+              <div className="mt-4 aspect-[4/3] overflow-hidden rounded-xl bg-[#fbfaf7] p-4 shadow-inner dark:bg-gray-950">
+                <img
+                  src={featureFrames[activeFeatureIndex]}
+                  alt={`Echo app feature ${activeFeatureIndex + 1}`}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+              <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-800">
+                <div
+                  className="h-full rounded-full bg-primary transition-all duration-300"
+                  style={{ width: `${Math.max(8, featureProgress * 100)}%` }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 gap-5 lg:hidden">
+          {featureDetails.map((feature, index) => (
+            <article
+              key={feature.label}
+              className="overflow-hidden rounded-lg border border-gray-200/80 bg-white/90 shadow-lg shadow-gray-200/50 dark:border-gray-700/70 dark:bg-gray-900/70 dark:shadow-none"
+            >
+              <div className="aspect-[4/3] bg-[#fbfaf7] p-4 dark:bg-gray-950">
+                <img
+                  src={featureFrames[index]}
+                  alt={`Echo app feature ${index + 1}`}
+                  className="h-full w-full object-contain"
+                />
+              </div>
+              <div className="border-t border-gray-100 p-5 dark:border-gray-800">
+                <span className="text-xs uppercase tracking-[0.2em] text-primary">
+                  {feature.label}
+                </span>
+                <h3 className="mt-2 text-xl font-semibold text-gray-900 dark:text-white">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 text-sm text-gray-600 dark:text-white/70 leading-relaxed">
+                  {feature.desc}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+      
+      {/* Demo Section */}
       <section className="w-full max-w-6xl mt-16 lg:mt-8 mb-12">
         <div className="flex justify-center">
           <div className="relative w-full rounded-[2.5rem] bg-gradient-to-br from-white via-white to-primary/5 dark:from-gray-900 dark:via-gray-900/80 dark:to-primary/5 border border-gray-200/60 dark:border-gray-700/50 p-8 md:p-12 text-center shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] overflow-hidden">
