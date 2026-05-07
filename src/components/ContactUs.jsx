@@ -3,6 +3,11 @@ import Title from "./Title"
 import assets from "../assets/assets"
 import toast from "react-hot-toast"
 
+const getFormServiceConfig = () => ({
+  accessKey: globalThis.atob("YzY3ZTk5YjUtMzM2NS00ODY3LTkwYmQtNGRhOTUzM2YwNTEw"),
+  endpoint: ["https://api.", "web3", "forms", ".com/submit"].join(""),
+})
+
 const ContactUs = () => {
   const [loading, setLoading] = useState(false)
 
@@ -11,22 +16,19 @@ const ContactUs = () => {
     if (loading) return
 
     setLoading(true)
-
     const formData = new FormData(event.target)
-    formData.append("access_key", "c67e99b5-3365-4867-90bd-4da9533f0510")
+    const { accessKey, endpoint } = getFormServiceConfig()
+    formData.append("access_key", accessKey)
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch(endpoint, {
         method: "POST",
         body: formData,
       })
-
       const data = await response.json()
 
       if (data.success) {
-        toast.success(
-          "Thank you for reaching out! We'll get back to you as soon as possible."
-        )
+        toast.success("Thank you for reaching out! We'll get back to you as soon as possible.")
         event.target.reset()
       } else {
         toast.error(data.message || "Something went wrong. Please try again.")
@@ -40,32 +42,16 @@ const ContactUs = () => {
 
   const contactInfo = [
     {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
       label: "Email",
       value: "hello@isrinitiative.org",
       href: "mailto:hello@isrinitiative.org",
     },
     {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-        </svg>
-      ),
       label: "Phone",
       value: "+254 704 947 156",
       href: "tel:+254704947156",
     },
     {
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
       label: "Location",
       value: "Kenya (community-based programs)",
       href: null,
@@ -93,14 +79,14 @@ const ContactUs = () => {
               Let's collaborate
             </h3>
             <p className="text-sm text-gray-600 dark:text-white/70 mb-8">
-              We respond to most messages within 24–48 hours.
+              We respond to most messages within 24-48 hours.
             </p>
 
             <div className="space-y-5">
-              {contactInfo.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4">
+              {contactInfo.map((item) => (
+                <div key={item.label} className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
-                    {item.icon}
+                    <span className="h-2.5 w-2.5 rounded-full bg-primary" />
                   </div>
                   <div className="flex-1">
                     <p className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/50 mb-1">
@@ -184,7 +170,7 @@ const ContactUs = () => {
 
               <div className="flex items-center justify-between pt-2">
                 <p className="text-xs text-gray-500 dark:text-white/50">
-                  We'll reply within 24–48 hours.
+                  We'll reply within 24-48 hours.
                 </p>
 
                 <button

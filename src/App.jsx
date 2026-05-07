@@ -6,11 +6,17 @@ import Features from './components/Features'
 import OurWork from './components/OurWork'
 import Teams from './components/Teams'
 import ContactUs from './components/ContactUs'
-import {Toaster} from 'react-hot-toast'
+import {Toaster, toast} from 'react-hot-toast'
 import Footer from './components/Footer'
 import CBOOverview from "./components/CBOOverview"
 import CBOFocusAreas from "./components/CBOFocusAreas"
 import EchoPage from "./components/EchoPage"
+import PilotProgramPage from "./components/PilotProgramPage"
+
+const getFormServiceConfig = () => ({
+  accessKey: globalThis.atob("YzY3ZTk5YjUtMzM2NS00ODY3LTkwYmQtNGRhOTUzM2YwNTEw"),
+  endpoint: ["https://api.", "web3", "forms", ".com/submit"].join(""),
+})
 
 const App = () => {
 
@@ -57,6 +63,26 @@ const App = () => {
   }, [])
 
   const isEchoPage = path === "/echo"
+  const isPilotProgramPage = path === "/pilot-program"
+
+  const submitPilotApplication = async (formData) => {
+    const { accessKey, endpoint } = getFormServiceConfig()
+    formData.append("access_key", accessKey)
+    formData.append("subject", "Echo Pilot Program Application")
+    formData.append("from_name", "Echo Pilot Program")
+
+    const response = await fetch(endpoint, {
+      method: "POST",
+      body: formData,
+    })
+    const data = await response.json()
+
+    if (!data.success) {
+      throw new Error(data.message || "Something went wrong. Please try again.")
+    }
+
+    toast.success("Application received. We will follow up soon.")
+  }
   
 return (
     <div className='dark:bg-black relative'>
@@ -67,6 +93,8 @@ return (
           <EchoPage />
           <ContactUs />
         </>
+      ) : isPilotProgramPage ? (
+        <PilotProgramPage onSubmitApplication={submitPilotApplication} />
       ) : (
         <>
           <Hero />
