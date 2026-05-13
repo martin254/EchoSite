@@ -31,6 +31,7 @@ import strathlogo from './Strathmore-University-Logo.png'
 import senseshub from './senseshub.jpg'
 import Lulu from './Lulu.png'
 import Nena from './Nena.png'
+import Neema from './Neema.jpeg'
 import safespace from './safespace.png'
 import simulizi from './simulizi.png'
 import ruth from './Ruth.jpg'
@@ -116,6 +117,7 @@ const assets = {
   heroimage,
   Lulu,
   Nena,
+  Neema,
   safespace,
   simulizi,
   echohero,
@@ -133,7 +135,8 @@ export const teamData = [
   { name: 'Collins Njau', title: 'Founder & Product Lead', image: njau ,linkedin:'https://www.linkedin.com/in/collins-njau-294831a7/' },
   { name: 'Ruth Kamau ', title: 'Founding Programmes Director', image: ruth, linkedin:'https://www.linkedin.com/in/ruth-kamau-b07399127/' },
   { name: 'Sheila Odhiambo', title: 'Technical Advisor, Programs & MEL', image: sheila, linkedin:'https://www.linkedin.com/in/sheila-odhiambo/' },
-  { name: 'Martin Muru', title: 'Principal AI Engineer', image: twi, linkedin:'https://www.linkedin.com/in/martinmuru/' },
+  { name: 'Martin Muru', title: 'Co-Founder & Principal AI Engineer', image: twi, linkedin:'https://www.linkedin.com/in/martinmuru/' },
   { name: 'Daisy Langat', title: 'Head of User Trust & Engagement', image: daisy, linkedin:'https://www.linkedin.com/in/daisy-lang-at-a37083147/' },
- 
+  { name: 'Neema Wambui', title: 'Lead Engineer, Speech Hardware Systems', image: Neema, linkedin:'' },
+
 ]
