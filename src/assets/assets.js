@@ -137,6 +137,6 @@ export const teamData = [
   { name: 'Sheila Odhiambo', title: 'Technical Advisor, Programs & MEL', image: sheila, linkedin:'https://www.linkedin.com/in/sheila-odhiambo/' },
   { name: 'Martin Muru', title: 'Co-Founder & Head of Technology', image: twi, linkedin:'https://www.linkedin.com/in/martinmuru/' },
   { name: 'Daisy Langat', title: 'Head of User Trust & Engagement', image: daisy, linkedin:'https://www.linkedin.com/in/daisy-lang-at-a37083147/' },
-  { name: 'Neema Wambui', title: 'Lead Engineer, Speech Hardware Systems', image: Neema, linkedin:'' },
+  { name: 'Neema Wambui', title: 'Speech Hardware Research Fellow', image: Neema, linkedin:'' },
 
 ]
