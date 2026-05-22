@@ -110,6 +110,11 @@ const PilotProgramPage = ({ onSubmitApplication }) => {
               </div>
 
               <label className="block">
+                <span className="text-sm text-gray-600 dark:text-white/70">Phone number</span>
+                <input required name="phone" type="tel" className="mt-2 w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-primary dark:border-gray-700 dark:bg-gray-950" placeholder="+254 700 000 000" />
+              </label>
+
+              <label className="block">
                 <span className="text-sm text-gray-600 dark:text-white/70">
                   Tell us why you want to join the pilot
                 </span>
