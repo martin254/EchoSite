@@ -134,8 +134,8 @@ export default assets
 export const teamData = [
   { name: 'Collins Njau', title: 'Founder and CEO', image: njau ,linkedin:'https://www.linkedin.com/in/collins-njau-294831a7/' },
   { name: 'Ruth Kamau ', title: 'Co-Founder & Programmes Director', image: ruth, linkedin:'https://www.linkedin.com/in/ruth-kamau-b07399127/' },
-  { name: 'Sheila Odhiambo', title: 'Technical Advisor, Programs & MEL', image: sheila, linkedin:'https://www.linkedin.com/in/sheila-odhiambo/' },
   { name: 'Martin Muru', title: 'Co-Founder & Head of Technology', image: twi, linkedin:'https://www.linkedin.com/in/martinmuru/' },
+  { name: 'Sheila Odhiambo', title: 'Technical Advisor, Programs & MEL', image: sheila, linkedin:'https://www.linkedin.com/in/sheila-odhiambo/' },
   { name: 'Daisy Langat', title: 'Head of User Trust & Engagement', image: daisy, linkedin:'https://www.linkedin.com/in/daisy-lang-at-a37083147/' },
   { name: 'Neema Wambui', title: 'Speech Hardware Research Fellow', image: Neema, linkedin:'' },
 
