@@ -31,7 +31,7 @@ const CBOFocusAreas = () => {
   return (
     <div
       id="focus-areas"
-      className="relative flex flex-col items-center gap-8 px-4 sm:px-12 lg:px-24 xl:px-40 pt-16 text-gray-700 dark:text-white overflow-hidden"
+      className="relative flex flex-col items-center gap-8 px-4 sm:px-12 lg:px-24 xl:px-40 pt-10 sm:pt-12 pb-8 text-gray-700 dark:text-white overflow-visible"
     >
       <div className="pointer-events-none absolute -bottom-20 left-0 h-64 w-64 rounded-full bg-primary/10 blur-[80px]" />
       <div className="pointer-events-none absolute -top-10 right-0 h-48 w-48 rounded-full bg-blue-400/10 blur-[60px]" />
