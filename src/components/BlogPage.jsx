@@ -10,7 +10,7 @@ const blogs = [
     image: "/blog/echo1.png",
     link: "https://medium.com/@collinsnjau39/amplifying-every-voice-building-inclusive-speech-technology-for-non-standard-speech-49c2dde635a4",
     excerpt:
-      "For the past six months, Collins has been focused on one mission: building inclusive voice-recognition tools for people with non-standard speech. The article traces the journey from real user stories to Echo, showing how dignity, independence, and the right to be understood shaped the work.",
+      "This article captures the genesis of Echo, written just after Collins built the first version. It traces how early user stories, technical experiments, and a simple belief in the right to be understood became the foundation for Echo's first working product.",
   },
   {
     title: "Teaching AI to Hear Voices It Was Never Trained For",
@@ -80,15 +80,15 @@ const BlogPage = () => {
             href={featured.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative block min-h-[280px] overflow-hidden bg-gray-100 dark:bg-gray-950 sm:min-h-[360px] lg:min-h-[520px]"
+            className="relative block min-h-[280px] overflow-hidden bg-gradient-to-br from-[#f7f5ef] via-white to-[#eceefa] p-3 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 sm:min-h-[360px] sm:p-4 lg:min-h-[520px]"
             aria-label={`Read ${featured.title}`}
           >
             <img
               src={featured.image}
               alt={featured.title}
-              className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              className="h-full w-full rounded-xl object-contain transition duration-700 group-hover:scale-[1.015]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
             <div className="absolute bottom-5 left-5 rounded-full bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-gray-900 backdrop-blur dark:bg-gray-950/85 dark:text-white">
               Featured
             </div>
