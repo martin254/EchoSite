@@ -12,6 +12,7 @@ import CBOOverview from "./components/CBOOverview"
 import CBOFocusAreas from "./components/CBOFocusAreas"
 import EchoPage from "./components/EchoPage"
 import PilotProgramPage from "./components/PilotProgramPage"
+import BlogPage from "./components/BlogPage"
 
 const getFormServiceConfig = () => ({
   accessKey: globalThis.atob("YzY3ZTk5YjUtMzM2NS00ODY3LTkwYmQtNGRhOTUzM2YwNTEw"),
@@ -64,6 +65,7 @@ const App = () => {
 
   const isEchoPage = path === "/echo"
   const isPilotProgramPage = path === "/pilot-program"
+  const isBlogPage = path === "/blog"
 
   const submitPilotApplication = async (formData) => {
     const { accessKey, endpoint } = getFormServiceConfig()
@@ -95,6 +97,8 @@ return (
         </>
       ) : isPilotProgramPage ? (
         <PilotProgramPage onSubmitApplication={submitPilotApplication} />
+      ) : isBlogPage ? (
+        <BlogPage />
       ) : (
         <>
           <Hero />

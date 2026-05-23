@@ -14,6 +14,7 @@ import ThemeToggleBtn from './ThemeToggleBtn'
                     <img src={assets.close_icon} alt='' className='w-6 h-6 absolute right-5 top-6 sm:hidden opacity-70 hover:opacity-100 transition-opacity' onClick={()=> setSidebarOpen(false)}/>
                     <a onClick={()=>setSidebarOpen(false)} href='/' className='sm:hover:border-b hover:translate-x-2 transition-all duration-300 py-2'>Home</a>
                     <a onClick={()=>setSidebarOpen(false)} href='/echo' className='sm:hover:border-b hover:translate-x-2 transition-all duration-300 py-2'>Echo</a>
+                    <a onClick={()=>setSidebarOpen(false)} href='/blog' className='sm:hover:border-b hover:translate-x-2 transition-all duration-300 py-2'>Blog</a>
                     <a onClick={()=>setSidebarOpen(false)} href='/pilot-program' className='sm:hover:border-b hover:translate-x-2 transition-all duration-300 py-2'>Pilot Program</a>
                     <a onClick={()=>setSidebarOpen(false)} href='/#about-cbo' className='sm:hover:border-b hover:translate-x-2 transition-all duration-300 py-2'>About</a>
                     <a onClick={()=>setSidebarOpen(false)} href='/#our-work' className='sm:hover:border-b hover:translate-x-2 transition-all duration-300 py-2'>Our Projects</a>
