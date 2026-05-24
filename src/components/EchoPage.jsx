@@ -493,11 +493,11 @@ need it most.
                   {activeFeatureIndex + 1}/{featureDetails.length}
                 </div>
               </div>
-              <div className="mt-4 aspect-[4/3] overflow-hidden rounded-xl bg-[#fbfaf7] p-4 shadow-inner dark:bg-gray-950">
+              <div className="mt-4 flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl border border-white/70 bg-gradient-to-br from-[#fbfaf7] via-white to-primary/5 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_18px_45px_rgba(15,23,42,0.08)] dark:border-white/10 dark:from-gray-950 dark:via-gray-950 dark:to-primary/10 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_18px_45px_rgba(0,0,0,0.28)]">
                 <img
                   src={featureFrames[activeFeatureIndex]}
                   alt={`Echo app feature ${activeFeatureIndex + 1}`}
-                  className="h-full w-full object-contain"
+                  className="max-h-full max-w-full rounded-[1.75rem] object-contain shadow-[0_18px_35px_rgba(15,23,42,0.12)] dark:shadow-[0_18px_35px_rgba(0,0,0,0.35)]"
                 />
               </div>
               <div className="mt-4 h-1.5 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-800">
@@ -516,11 +516,11 @@ need it most.
               key={feature.label}
               className="overflow-hidden rounded-lg border border-gray-200/80 bg-white/90 shadow-lg shadow-gray-200/50 dark:border-gray-700/70 dark:bg-gray-900/70 dark:shadow-none"
             >
-              <div className="aspect-[4/3] bg-[#fbfaf7] p-4 dark:bg-gray-950">
+              <div className="flex aspect-[4/3] items-center justify-center overflow-hidden bg-gradient-to-br from-[#fbfaf7] via-white to-primary/5 p-4 dark:from-gray-950 dark:via-gray-950 dark:to-primary/10">
                 <img
                   src={featureFrames[index]}
                   alt={`Echo app feature ${index + 1}`}
-                  className="h-full w-full object-contain"
+                  className="max-h-full max-w-full rounded-[1.5rem] object-contain shadow-[0_16px_32px_rgba(15,23,42,0.12)] dark:shadow-[0_16px_32px_rgba(0,0,0,0.35)]"
                 />
               </div>
               <div className="border-t border-gray-100 p-5 dark:border-gray-800">
