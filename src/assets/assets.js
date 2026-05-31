@@ -49,6 +49,7 @@ import livelihods from './Livelihoods.png'
 import AITutor from './AITutor.png'
 import mentalhealth from './mentalhealth.png'
 import echo2 from './Echo2.png'
+import echologo from './Echologo.jpeg'
 
 export const audioExamples = {
   user1: {
@@ -126,7 +127,8 @@ const assets = {
   livelihods,
   AITutor,
   mentalhealth,
-  echo2
+  echo2,
+  echologo
 }
 
 export default assets

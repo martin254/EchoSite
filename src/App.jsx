@@ -26,6 +26,7 @@ const App = () => {
 
   const dotRef = useRef(null)
   const outlineRef = useRef(null)
+  const pendingHashRef = useRef(window.location.hash)
 
   //Refs for custom cursor Position Tracking
   const mouse = useRef({x:0, y:0})
@@ -57,11 +58,72 @@ const App = () => {
     }
   },[])
 
+  const scrollToHash = (hash) => {
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      return
+    }
+
+    const target = document.getElementById(hash.slice(1))
+    if (target) {
+      const navOffset = 96
+      const top = target.getBoundingClientRect().top + window.scrollY - navOffset
+      window.scrollTo({ top, behavior: 'smooth' })
+    }
+  }
+
   useEffect(() => {
-    const handlePopState = () => setPath(window.location.pathname)
+    const handlePopState = () => {
+      pendingHashRef.current = window.location.hash
+      setPath(window.location.pathname)
+    }
+
+    const handleInternalLinkClick = (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) {
+        return
+      }
+
+      const link = event.target.closest('a')
+      if (!link || link.target || link.hasAttribute('download')) return
+
+      const href = link.getAttribute('href')
+      if (!href || href.startsWith('mailto:') || href.startsWith('tel:')) return
+
+      const url = new URL(href, window.location.origin)
+      if (url.origin !== window.location.origin) return
+
+      event.preventDefault()
+      const nextPath = url.pathname
+      const nextHash = url.hash
+      pendingHashRef.current = nextHash
+      window.history.pushState({}, '', `${nextPath}${nextHash}`)
+      setPath(nextPath)
+
+      if (nextPath === window.location.pathname) {
+        window.requestAnimationFrame(() => scrollToHash(nextHash))
+      }
+    }
+
     window.addEventListener('popstate', handlePopState)
-    return () => window.removeEventListener('popstate', handlePopState)
+    document.addEventListener('click', handleInternalLinkClick)
+    return () => {
+      window.removeEventListener('popstate', handlePopState)
+      document.removeEventListener('click', handleInternalLinkClick)
+    }
   }, [])
+
+  useEffect(() => {
+    const hash = pendingHashRef.current
+    const timeout = window.setTimeout(() => scrollToHash(hash), 80)
+    return () => window.clearTimeout(timeout)
+  }, [path])
 
   const isEchoPage = path === "/echo"
   const isPilotProgramPage = path === "/pilot-program"

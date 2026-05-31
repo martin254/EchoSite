@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react"
 import assets, { audioExamples } from "../assets/assets"
+import EchoIntroSection from "./EchoIntroSection"
 
 const EchoPage = () => {
   const frameCount = 8
@@ -247,7 +248,7 @@ need it most.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3">
             <a
-              href="/#contact-us"
+              href="/pilot-program"
               className="text-sm sm:text-base bg-primary text-white px-6 py-3 rounded-full hover:scale-[1.02] transition-all"
             >
               Request a demo
@@ -270,11 +271,15 @@ need it most.
         </div>
       </section>
 
+      <EchoIntroSection className="mt-20 lg:mt-28 pb-20 lg:pb-24" />
+
       <section
         id="echo-story"
         ref={sectionRef}
-        className="hidden lg:block w-full max-w-6xl mt-16 relative pb-20"
+        className="hidden lg:block w-full max-w-6xl mt-0 relative pb-20"
       >
+        <div className="pointer-events-none absolute -top-28 left-1/2 h-72 w-[70%] -translate-x-1/2 rounded-full bg-primary/[0.045] blur-[90px]" />
+        <div className="pointer-events-none absolute top-20 right-0 h-64 w-64 rounded-full bg-cyan-300/10 blur-[90px]" />
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-10 items-start">
           <div className="relative flex flex-col lg:pr-4 rounded-[2.25rem] border border-gray-200/80 dark:border-gray-700/80 bg-white/60 dark:bg-gray-900/30 backdrop-blur-2xl shadow-[0_24px_80px_rgba(15,23,42,0.08)] p-6 sm:p-7 lg:p-8 overflow-hidden">
             <div className="pointer-events-none absolute -top-20 left-0 h-44 w-44 rounded-full bg-primary/10 blur-3xl" />
@@ -366,7 +371,8 @@ need it most.
         </div>
       </section>
 
-      <section className="lg:hidden w-full max-w-6xl mt-12 mb-20">
+      <section className="lg:hidden w-full max-w-6xl mt-0 mb-20 relative">
+        <div className="pointer-events-none absolute -top-16 left-1/2 h-44 w-[80%] -translate-x-1/2 rounded-full bg-primary/[0.045] blur-[70px]" />
         <div className="mb-8 text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-gray-500 dark:text-white/60">
             Onboarding story
@@ -616,7 +622,7 @@ need it most.
 
               <div className="mt-8">
                 <a
-                  href="/#contact-us"
+                  href="/pilot-program"
                   className="inline-flex text-sm sm:text-base bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-3.5 rounded-full hover:scale-[1.02] transition-all shadow-lg hover:shadow-xl"
                 >
                   Try it yourself
