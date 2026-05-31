@@ -273,8 +273,9 @@ need it most.
 
       <EchoIntroSection className="mt-20 lg:mt-28 pb-20 lg:pb-24" />
 
+      <div id="echo-story" className="scroll-mt-28" />
+
       <section
-        id="echo-story"
         ref={sectionRef}
         className="hidden lg:block w-full max-w-6xl mt-0 relative pb-20"
       >

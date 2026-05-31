@@ -96,7 +96,7 @@ const App = () => {
       const href = link.getAttribute('href')
       if (!href || href.startsWith('mailto:') || href.startsWith('tel:')) return
 
-      const url = new URL(href, window.location.origin)
+      const url = new URL(href, window.location.href)
       if (url.origin !== window.location.origin) return
 
       event.preventDefault()
