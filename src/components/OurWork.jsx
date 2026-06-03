@@ -81,20 +81,20 @@ const OurWork = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
               
               <div className="absolute top-5 left-5">
-                <span className="text-xs font-medium px-4 py-1.5 rounded-full bg-white/95 text-gray-900 backdrop-blur-sm border border-white/40 shadow-lg">
+                <span className="text-sm font-medium px-4 py-1.5 rounded-full bg-white/95 text-gray-900 backdrop-blur-sm border border-white/40 shadow-lg">
                   {work.tag}
                 </span>
               </div>
             </div>
 
             <div className="relative z-10 p-7">
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
                 {work.title}
               </h3>
-              <p className="text-sm font-medium text-primary/80 mt-1 mb-4">
+              <p className="text-base font-medium text-primary/80 mt-1 mb-4">
                 {work.subtitle}
               </p>
-              <p className="text-sm text-gray-600 dark:text-white/70 leading-relaxed">
+              <p className="text-base text-gray-600 dark:text-white/70 leading-relaxed">
                 {work.description}
               </p>
             </div>

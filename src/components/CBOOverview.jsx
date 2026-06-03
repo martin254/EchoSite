@@ -54,7 +54,7 @@ const CBOOverview = () => {
               <p className="relative z-10 text-xs font-medium uppercase tracking-wider text-primary mb-3">
                 Vision
               </p>
-              <p className="relative z-10 text-sm text-gray-600 dark:text-white/70 leading-relaxed">
+              <p className="relative z-10 text-base text-gray-600 dark:text-white/70 leading-relaxed">
                 A society where everyone, regardless of how they communicate, can access services, protection, and
                 opportunity with dignity.
               </p>
@@ -66,7 +66,7 @@ const CBOOverview = () => {
               <p className="relative z-10 text-xs font-medium uppercase tracking-wider text-primary mb-3">
                 Mission
               </p>
-              <p className="relative z-10 text-sm text-gray-600 dark:text-white/70 leading-relaxed">
+              <p className="relative z-10 text-base text-gray-600 dark:text-white/70 leading-relaxed">
                 To design inclusive, technology-enabled solutions that prevent harm, strengthen protection, improve access
                 to services, and support recovery and reintegration for people with speech impairments.
               </p>
@@ -78,7 +78,7 @@ const CBOOverview = () => {
               <p className="relative z-10 text-xs font-medium uppercase tracking-wider text-primary mb-3">
                 Core Technology
               </p>
-              <p className="relative z-10 text-sm text-gray-600 dark:text-white/70 leading-relaxed">
+              <p className="relative z-10 text-base text-gray-600 dark:text-white/70 leading-relaxed">
                 <span className="font-semibold text-gray-900 dark:text-white">ECHO</span>{" "}
                 is our assistive communication engine that improves clarity while preserving user identity and intent.
               </p>
@@ -100,11 +100,11 @@ const CBOOverview = () => {
                 <div className="h-8 w-8 rounded-xl bg-primary/10 flex items-center justify-center shadow-[0_10px_25px_rgba(80,68,229,0.18)] dark:bg-primary/20">
                   <div className="w-2 h-2 rounded-full bg-primary" />
                 </div>
-                <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                <h3 className="font-semibold text-xl text-gray-900 dark:text-white">
                   {item.title}
                 </h3>
               </div>
-              <p className="text-sm text-gray-600 dark:text-white/70 leading-relaxed pl-11">
+              <p className="text-base text-gray-600 dark:text-white/70 leading-relaxed pl-11">
                 {item.desc}
               </p>
             </div>

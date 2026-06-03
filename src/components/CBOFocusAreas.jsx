@@ -55,10 +55,10 @@ const CBOFocusAreas = () => {
                 <span className="text-lg font-semibold text-white">{idx + 1}</span>
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white mb-2">
                   {a.title}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-white/70 leading-relaxed">
+                <p className="text-base text-gray-600 dark:text-white/70 leading-relaxed">
                   {a.desc}
                 </p>
               </div>

@@ -10,6 +10,33 @@
      cursor: none;
 }
 
+html {
+     font-size: 16px;
+}
+
+body {
+     text-rendering: optimizeLegibility;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+li {
+     line-height: 1.7;
+}
+
+@media (min-width: 640px) {
+     html {
+          font-size: 17px;
+     }
+}
+
+@media (min-width: 1280px) {
+     html {
+          font-size: 18px;
+     }
+}
+
 @theme {
     --color-primary: #5044E5;
 }

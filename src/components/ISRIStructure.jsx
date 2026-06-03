@@ -58,13 +58,13 @@ const ISRIStructure = () => {
                   <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
                     {entity.title}
                   </h3>
-                  <p className="mt-1 text-sm font-medium text-primary/80">
+                  <p className="mt-1 text-base font-medium text-primary/80">
                     {entity.subtitle}
                   </p>
                 </div>
               </div>
 
-              <p className="text-sm leading-relaxed text-gray-600 dark:text-white/70">
+              <p className="text-base leading-relaxed text-gray-600 dark:text-white/70">
                 {entity.body}
               </p>
 
@@ -83,7 +83,7 @@ const ISRIStructure = () => {
         ))}
       </div>
 
-      <p className="max-w-3xl text-center text-sm italic text-gray-500 dark:text-white/60">
+      <p className="max-w-3xl text-center text-base italic text-gray-500 dark:text-white/60">
         Formally linked through a cross-entity operational agreement, ISRI Kenya and ISRI UK work as one team toward one vision.
       </p>
     </section>
