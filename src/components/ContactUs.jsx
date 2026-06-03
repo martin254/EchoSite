@@ -53,7 +53,7 @@ const ContactUs = () => {
     },
     {
       label: "Location",
-      value: "Kenya (community-based programs)",
+      value: "Kenya & United Kingdom",
       href: null,
     },
   ]

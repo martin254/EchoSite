@@ -10,6 +10,7 @@ import {Toaster, toast} from 'react-hot-toast'
 import Footer from './components/Footer'
 import CBOOverview from "./components/CBOOverview"
 import CBOFocusAreas from "./components/CBOFocusAreas"
+import ISRIStructure from "./components/ISRIStructure"
 import EchoPage from "./components/EchoPage"
 import PilotProgramPage from "./components/PilotProgramPage"
 import BlogPage from "./components/BlogPage"
@@ -164,6 +165,7 @@ return (
       ) : (
         <>
           <Hero />
+          <ISRIStructure />
           <Partners theme={theme} />
           <CBOOverview />
           <CBOFocusAreas />

@@ -31,11 +31,12 @@ const Footer = ({ theme }) => {
           />
 
           <p className="text-sm opacity-80">
-            Inclusive communication, without barriers.
+            Inclusive Speech Rights Initiative (ISRI) — Inclusive communication, without barriers.
+            Building ethical, community-rooted assistive technology across Kenya and the United Kingdom.
           </p>
 
           <p className="text-xs opacity-60">
-            Building ethical, community-rooted assistive technology across Kenya.
+            Kenya (community programmes) · United Kingdom (international operations)
           </p>
 
           <ul className="flex gap-6 text-sm pt-2">

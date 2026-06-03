@@ -84,7 +84,7 @@ const EchoIntroSection = ({ id, className = "" }) => {
               <div className="absolute inset-[8px] sm:inset-[10px] rounded-[1.55rem] sm:rounded-[2.12rem] bg-[#050507] shadow-[inset_0_1px_2px_rgba(255,255,255,0.32),inset_0_-20px_45px_rgba(0,0,0,0.78)]" />
               <div className="absolute inset-[17px] sm:inset-[21px] rounded-[1.08rem] sm:rounded-[1.55rem] overflow-hidden bg-white">
                 <img
-                  src={assets.echologo}
+                  src={assets.echologo2}
                   alt="Echo logo"
                   className="absolute inset-0 h-full w-full scale-[1.025] object-cover"
                 />
