@@ -561,7 +561,50 @@ need it most.
               <p className="text-base sm:text-lg mt-4 max-w-xl mx-auto text-gray-600 dark:text-white/70 leading-relaxed">
                 Compare speakers before and after Echo — clarity improves while identity and intent are preserved.
               </p>
-              
+              <div className="mt-12 grid grid-cols-1 lg:grid-cols-[0.86fr_1.14fr] gap-10 lg:gap-14 items-center text-left">
+                <div className="max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+                  <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-primary">
+                    <span className="h-px w-8 bg-primary/50" />
+                    Product walkthrough
+                  </span>
+                  <h3 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900 dark:text-white">
+                    Watch Echo working on mobile.
+                  </h3>
+                  <p className="mt-4 text-sm sm:text-base leading-relaxed text-gray-600 dark:text-white/70">
+                    A phone-first look at how Echo captures speech, supports clarity, and keeps the experience calm and personal.
+                  </p>
+                </div>
+
+                <div className="relative flex min-h-[520px] items-center justify-center overflow-visible">
+                  <div className="pointer-events-none absolute inset-x-10 bottom-10 h-14 rounded-full bg-gray-950/20 blur-3xl dark:bg-black/60" />
+                  <div className="pointer-events-none absolute left-8 top-10 h-44 w-44 rounded-full bg-primary/15 blur-[80px]" />
+                  <div className="pointer-events-none absolute right-10 bottom-16 h-52 w-52 rounded-full bg-cyan-300/15 blur-[90px]" />
+
+                  <div className="relative">
+                    <div className="absolute -inset-2 translate-x-4 translate-y-5 rounded-[3.25rem] bg-slate-900/18 blur-xl dark:bg-black/45" />
+                    <div className="absolute inset-0 translate-x-2.5 translate-y-2.5 rounded-[3rem] bg-gradient-to-br from-slate-300 via-slate-500 to-slate-800 opacity-55" />
+                    <div className="relative w-[245px] sm:w-[292px] aspect-[9/19.4] rounded-[3rem] bg-gradient-to-br from-[#fbfcff] via-[#d9dee8] to-[#7f8999] p-[9px] shadow-[0_38px_95px_rgba(15,23,42,0.28),0_12px_26px_rgba(15,23,42,0.16),inset_1px_1px_0_rgba(255,255,255,0.7)] dark:shadow-[0_44px_110px_rgba(0,0,0,0.58),inset_1px_1px_0_rgba(255,255,255,0.35)]">
+                    <div className="absolute -left-1 top-28 h-14 w-1.5 rounded-full bg-slate-500/40 shadow-[inset_-1px_0_0_rgba(255,255,255,0.4)]" />
+                    <div className="absolute -left-1 top-48 h-20 w-1.5 rounded-full bg-slate-500/35 shadow-[inset_-1px_0_0_rgba(255,255,255,0.35)]" />
+                    <div className="absolute -right-1 top-36 h-24 w-1.5 rounded-full bg-slate-500/35 shadow-[inset_1px_0_0_rgba(255,255,255,0.35)]" />
+                    <div className="absolute inset-[9px] rounded-[2.65rem] bg-[#050507] shadow-[inset_0_1px_2px_rgba(255,255,255,0.28),inset_0_-22px_48px_rgba(0,0,0,0.78)]" />
+                    <div className="absolute left-1/2 top-[12px] z-20 h-6 w-28 -translate-x-1/2 rounded-full bg-black shadow-[0_2px_10px_rgba(0,0,0,0.38)]" />
+                    <div className="absolute inset-[18px] rounded-[2.08rem] overflow-hidden bg-black">
+                      <iframe
+                        title="Echo mobile demo video"
+                        src="https://www.youtube.com/embed/T9FDwhzZFeY?rel=0&modestbranding=1&playsinline=1"
+                        className="h-full w-full"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      />
+                      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(118deg,rgba(255,255,255,0.18)_0%,transparent_24%,transparent_75%,rgba(255,255,255,0.08)_100%)]" />
+                    </div>
+                    <div className="pointer-events-none absolute inset-[18px] rounded-[2.08rem] border border-white/12" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-10 max-w-5xl mx-auto space-y-10">
                 {Object.entries(audioExamples).map(([key, user]) => (
                   <div key={key} className="relative">
