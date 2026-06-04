@@ -12,8 +12,9 @@ return (
             Everyone deserves to be heard <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'>— and understood.</span>
         </h1>
 
-        <p className='text-sm sm:text-lg font-medium text-black dark:text-white/75 max-w-4/5 sm:max-w-3xl pb-3'
-          >Inclusive Speech Rights Initiative (ISRI) is a dual-registered social enterprise operating across Kenya and the United Kingdom. ISRI Kenya Limited leads our community programmes, pilot deployments, and user research on the ground. ISRI UK Limited, our UK-registered entity, anchors our international partnerships, research collaborations, and fundraising operations. Together, both entities advance one mission: empowering people with speech impairments to access services, protection, and opportunities with dignity — free from stigma or dependency.</p>
+<p className='text-sm sm:text-lg font-medium max-w-4/5 sm:max-w-3xl pb-3'>
+          The Inclusive Speech Rights Initiative (ISRI) is a Kenya–UK social enterprise building inclusive speech technologies for people with speech impairments. Through Echo, Africa's first personalised speech recognition engine, we help ensure that non-standard voices are recognised, understood, and included in a world increasingly powered by AI.<br/>
+          <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent font-medium'>Because access, opportunity, and dignity should never depend on how someone speaks.</span></p>
 
         <div className='relative'>
             <img src={assets.echohero} alt='' className='w-full max-w-6xl rounded-4xl' loading="lazy"/>
