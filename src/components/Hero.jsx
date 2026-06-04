@@ -13,7 +13,7 @@ return (
         </h1>
 
 <p className='text-sm sm:text-lg font-medium max-w-4/5 sm:max-w-3xl pb-3'>
-          The Inclusive Speech Rights Initiative (ISRI) is a Kenya–UK social enterprise building inclusive speech technologies for people with speech impairments. Through Echo, Africa's first personalised speech recognition engine, we help ensure that non-standard voices are recognised, understood, and included in a world increasingly powered by AI.<br/>
+          Inclusive Speech Rights Initiative (ISRI) is a Kenya–UK social enterprise building inclusive speech technologies for people with speech impairments. Through Echo, Africa's first personalised speech recognition engine, we help ensure that non-standard voices are recognised, understood, and included in a world increasingly powered by AI.<br/>
           <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent font-medium'>Because access, opportunity, and dignity should never depend on how someone speaks.</span></p>
 
         <div className='relative'>
