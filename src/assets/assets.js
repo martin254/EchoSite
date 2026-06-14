@@ -35,10 +35,10 @@ import Neema from './Neema.jpeg'
 import safespace from './safespace.png'
 import simulizi from './simulizi.png'
 import ruth from './Ruth.jpg'
-import njau from './Njau.jpg'
+import njauprof from './njauprof.jpg'
 import daisy from './Daisy.jpg'
 import sheila from './Sheila.jpg'
-import twi from './Twiri.jpg'
+import TwiProf from './TwiProf.png'
 import echohero from './Echohero.png'
 import gdidark from './gdihubdark.svg'
 import strathdark from './strathdarkness.png'
@@ -136,9 +136,9 @@ const assets = {
 export default assets
 
 export const teamData = [
-  { name: 'Collins Njau', title: 'Founder and CEO', image: njau ,linkedin:'https://www.linkedin.com/in/collins-njau-294831a7/' },
+  { name: 'Collins Njau', title: 'Founder and CEO', image: njauprof ,linkedin:'https://www.linkedin.com/in/collins-njau-294831a7/' },
   { name: 'Ruth Kamau ', title: 'Co-Founder & Programmes Director', image: ruth, linkedin:'https://www.linkedin.com/in/ruth-kamau-b07399127/' },
-  { name: 'Martin Muru', title: 'Co-Founder & Head of Technology', image: twi, linkedin:'https://www.linkedin.com/in/martinmuru/' },
+  { name: 'Martin Muru', title: 'Co-Founder & Head of Technology', image: TwiProf, linkedin:'https://www.linkedin.com/in/martinmuru/' },
   { name: 'Sheila Odhiambo', title: 'Technical Advisor, Programs & MEL', image: sheila, linkedin:'https://www.linkedin.com/in/sheila-odhiambo/' },
   { name: 'Daisy Langat', title: 'Head of User Trust & Engagement', image: daisy, linkedin:'https://www.linkedin.com/in/daisy-lang-at-a37083147/' },
   { name: 'Neema Wambui', title: 'Speech Hardware Research Fellow', image: Neema, linkedin:'' },
