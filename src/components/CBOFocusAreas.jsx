@@ -11,7 +11,7 @@ const CBOFocusAreas = () => {
       desc: "Accessible SRHR information and care pathways so people with speech impairments can ask questions, communicate symptoms, and seek services without stigma or dependency.",
     },
     {
-      title: "Safeguarding & Protection (SGBV focus)",
+      title: "Access to Justice (SGBV focus)",
       desc: "Survivor-centred support systems that enable safe disclosure, access to care and justice, and inclusive community response grounded in autonomy, confidentiality, and informed consent.",
     },
     {
