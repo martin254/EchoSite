@@ -9,7 +9,7 @@ return (
             <p className='text-xs font-medium'>Inclusive communication without barriers.</p>
         </div>
         <h1 className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-[95px] max-w-5xl'>
-            Everyone deserves to be heard <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'>— and understood.</span>
+            Everyone deserves to be heard, <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'> and understood.</span>
         </h1>
 
 <p className='text-sm sm:text-lg font-medium max-w-4/5 sm:max-w-3xl pb-3'>
