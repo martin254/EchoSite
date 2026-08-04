@@ -38,13 +38,14 @@ const PilotProgramPage = ({ onSubmitApplication }) => {
               Help shape the next generation of accessible speech technology
             </h1>
             <p className="mt-5 max-w-2xl text-base sm:text-lg leading-relaxed text-gray-600 dark:text-white/72">
-              We are inviting early users, caregivers, educators, clinicians, and community
-              partners to test Echo and share feedback before wider release.
+              Echo is live in a small pilot capped at a maximum of 20 for this phase. We are inviting early users,
+              caregivers, educators, clinicians, and community partners to help us build what people
+              need in real communication moments, not what we imagine from a distance.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
               {[
-                ["Early access", "Try new Echo workflows before public launch."],
+                 ["Live pilot", "Join the early pilot cohort as Echo grows carefully."],
                 ["User-led design", "Your feedback helps improve real communication moments."],
                 ["Guided support", "Our team will help you get set up and comfortable."],
               ].map(([title, desc]) => (

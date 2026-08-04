@@ -14,6 +14,7 @@ import ISRIStructure from "./components/ISRIStructure"
 import EchoPage from "./components/EchoPage"
 import PilotProgramPage from "./components/PilotProgramPage"
 import BlogPage from "./components/BlogPage"
+import Seo from "./components/Seo"
 
 const getFormServiceConfig = () => ({
   accessKey: globalThis.atob("YzY3ZTk5YjUtMzM2NS00ODY3LTkwYmQtNGRhOTUzM2YwNTEw"),
@@ -130,6 +131,47 @@ const App = () => {
   const isPilotProgramPage = path === "/pilot-program"
   const isBlogPage = path === "/blog"
 
+  const routeSeo = {
+    "/": {
+      title: "Echo by ISRI - Personalised Voice AI for Non-Standard Speech",
+      description:
+        "Mainstream voice technology routinely mishears people with non-standard speech. Echo builds a personalised speech model for each user. In a small pilot capped at a maximum of 20 for this phase, Echo has shown up to ~42% relative WER reduction (over 23 percentage points absolute) for individual cerebral-palsy speakers versus the non-personalised baseline.",
+      path: "/",
+    },
+    "/echo": {
+      title: "Echo - Personalised ASR and AAC App for Non-Standard Speech",
+      description:
+        "Echo is ISRI's personalised ASR engine and AAC app for voice AI accessibility, using per-user fine-tuning and LoRA adapters for people mainstream speech recognition fails.",
+      path: "/echo",
+    },
+    "/pilot-program": {
+      title: "Echo Pilot Program - Help Build Personalised Speech AI",
+      description:
+        "Join Echo's live pilot for personalised speech AI. ISRI is working with a small cohort of early users and partners to build accessible speech technology around real communication needs.",
+      path: "/pilot-program",
+    },
+    "/blog": {
+      title: "ISRI Blog - Voice AI, Inclusive ASR, and Non-Standard Speech",
+      description:
+        "Research notes and team reflections from ISRI on personalised speech recognition, inclusive ASR, accessibility, and voice AI for non-standard speech.",
+      path: "/blog",
+    },
+  }
+
+  const seo = routeSeo[path] || routeSeo["/"]
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Inclusive Speech Rights Initiative",
+    alternateName: "ISRI",
+    url: "https://www.isrinitiative.org/",
+    email: "hello@isrinitiative.org",
+    sameAs: ["https://www.linkedin.com/company/inclusive-speech-rights-initiative"],
+    description:
+      "ISRI builds Africa-first personalised speech AI and assistive communication products for people with non-standard speech.",
+  }
+
   const submitPilotApplication = async (formData) => {
     const { accessKey, endpoint } = getFormServiceConfig()
     formData.append("access_key", accessKey)
@@ -151,6 +193,13 @@ const App = () => {
   
 return (
     <div className='dark:bg-black relative'>
+      <Seo {...seo}>
+        {path === "/" && (
+          <script type="application/ld+json">
+            {JSON.stringify(organizationSchema)}
+          </script>
+        )}
+      </Seo>
       <Toaster />
       <Navbar theme={theme} setTheme={setTheme} />
       {isEchoPage ? (

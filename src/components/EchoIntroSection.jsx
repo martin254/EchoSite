@@ -19,7 +19,7 @@ const EchoIntroSection = ({ id, className = "" }) => {
       number: "03",
       title: "Trained on Real Non-Standard Speech",
       desc:
-        "Echo is powered by a Whisper-based model fine-tuned on real recordings from people with speech impairments, including speakers with Cerebral Palsy, dysarthria, and non-standard Swahili and accented speech. This makes Echo significantly more accurate and respectful than generic speech recognition systems that were never built with your voice in mind.",
+        "Echo is powered by a Whisper-based model adapted with real recordings from people with speech impairments, including speakers with cerebral palsy, dysarthria, and non-standard Swahili and accented speech. In early testing, Echo has shown up to ~42% relative WER reduction (over 23 percentage points absolute) for individual cerebral-palsy speakers versus the non-personalised baseline.",
     },
     {
       number: "04",

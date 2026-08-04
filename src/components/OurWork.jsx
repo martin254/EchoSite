@@ -5,46 +5,48 @@ import assets from "../assets/assets"
 const OurWork = () => {
   const workData = [
     {
-      title: "Nena",
-      subtitle: "Assistive communication for survivors",
+      title: "Echo App",
+      status: "LIVE",
+      subtitle: "Our first live product, built on the Echo Engine",
       description:
-        "An assistive communication tool that enables survivors of sexual violence with speech impairments to safely record their experiences, generate accurate transcripts, and share them with trusted support systems — without the pressure of real-time verbal disclosure.",
-      image: assets.Nena,
-      tag: "Survivor Support",
-    },
-    {
-      title: "Lulu",
-      subtitle: "Voice-first women's health companion",
-      description:
-        "An AI-powered, voice-first health companion supporting women with speech impairments across menstrual and reproductive health journeys through accessible, culturally relevant, and stigma-free voice interactions.",
-      image: assets.Lulu,
-      tag: "Women's Health",
-    },
-    {
-      title: "Safe Spaces",
-      subtitle: "Mental wellness for all voices",
-      description:
-        "Inclusive, communication-accessible mental wellness spaces where individuals with non-standard speech can express themselves, access psychosocial support, and engage in therapeutic processes.",
-      image: assets.mentalhealth,
-      tag: "Safe Spaces",
+        "Transcription, dictation studio, voice cloning, voice-note export & sharing, and a saved recordings library — all tuned to each user's own voice so clearer communication feels effortless.",
+      image: assets.echo2,
+      tag: "AAC app",
     },
     {
       title: "Echo Tutor",
-      subtitle: "Access to quality education",
+      status: "In development",
+      subtitle: "Learn mathematics by speaking",
       description:
-        "Voice-first learning companions that enable students with speech impairments to ask questions, engage with curriculum content, and learn independently.",
+        "A learning platform that lets students with disabilities do mathematics by speaking rather than writing. Echo Tutor evaluates thinking through a three-stage workflow: free thinking & brainstorming, guided reflection, and guided solution building with a dedicated mathematics-validation layer.",
       image: assets.AITutor,
       tag: "Education",
     },
     {
-      title: "Voice to Work",
-      subtitle: "Inclusive pathways to work",
+      title: "Lekezi",
+      status: "In development",
+      subtitle: "Speech practice for the things you most want to say",
       description:
-        "An economic empowerment program supporting youth and adults with speech impairments to transition from education into safe, sustainable work and entrepreneurship.",
-      image: assets.livelihods,
-      tag: "Economy",
+        "A mobile app that helps people with speech impairments practise specific real-world goals — saying a name, placing an order, giving an introduction. Lekezi deliberately does not try to change how a person sounds; it optimises for confidence and capability on the goals that matter. Built with therapists and NGOs.",
+      image: assets.simulizi,
+      tag: "Practice",
+    },
+    {
+      title: "VoiceFlow",
+      status: "In development",
+      subtitle: "Operate the entire web by voice",
+      description:
+        "An AI-powered Chrome extension letting people with non-standard speech operate the web using their personalised Echo model. Speak conversationally and let an LLM/agentic layer understand intent and take action: fill forms, navigate, read pages, and complete multi-step tasks.",
+      image: assets.work_dashboard_management,
+      tag: "Web access",
     },
   ]
+
+  const statusClass = {
+    LIVE: "bg-emerald-500/12 text-emerald-700 dark:text-emerald-300 border-emerald-500/25",
+    "In development": "bg-primary/10 text-primary border-primary/20",
+    Research: "bg-amber-500/12 text-amber-700 dark:text-amber-300 border-amber-500/25",
+  }
 
   return (
     <div
@@ -56,33 +58,34 @@ const OurWork = () => {
       <div className="pointer-events-none absolute top-60 right-0 h-56 w-56 rounded-full bg-blue-400/10 blur-[70px]" />
 
       <Title
-        title="Our Projects"
-        desc="Technology built with communities, designed for dignity, access, and real-world impact."
+        title="Our Product Suite"
+        desc="Build the model once; every product inherits it. The Echo Engine and Echo App are live and in pilot — the three products below are what we build next on that proven foundation."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-6xl">
-        {workData.map((work, index) => (
-          <div
-            key={index}
-            className="group relative rounded-[2rem] border border-gray-200/50 dark:border-gray-700/40 bg-white dark:bg-gray-900/60 overflow-hidden hover:shadow-2xl hover:shadow-primary/15 hover:-translate-y-3 transition-all duration-500"
+        {workData.map((work) => (
+          <article
+            key={work.title}
+            className="group relative rounded-lg border border-gray-200/50 dark:border-gray-700/40 bg-white dark:bg-gray-900/60 overflow-hidden hover:shadow-2xl hover:shadow-primary/15 hover:-translate-y-2 transition-all duration-500"
             style={{ boxShadow: '0 4px 24px -4px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)' }}
           >
-            <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-primary/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-primary/5 blur-2xl group-hover:bg-primary/10 transition-all" />
-            <div className="absolute -top-4 -left-4 w-20 h-20 rounded-full bg-blue-400/5 blur-2xl group-hover:bg-blue-400/10 transition-all" />
+            <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
             
             <div className="relative overflow-hidden aspect-[16/10]">
               <img
                 src={work.image}
-                alt={work.title}
-                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.08]"
+                alt={`${work.title} product preview`}
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-[1.06]"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
               
-              <div className="absolute top-5 left-5">
+              <div className="absolute top-5 left-5 flex flex-wrap gap-2">
                 <span className="text-sm font-medium px-4 py-1.5 rounded-full bg-white/95 text-gray-900 backdrop-blur-sm border border-white/40 shadow-lg">
                   {work.tag}
+                </span>
+                <span className={`text-sm font-medium px-4 py-1.5 rounded-full border backdrop-blur-sm shadow-lg ${statusClass[work.status]}`}>
+                  {work.status}
                 </span>
               </div>
             </div>
@@ -98,7 +101,7 @@ const OurWork = () => {
                 {work.description}
               </p>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </div>

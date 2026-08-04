@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react"
+import { Helmet } from "react-helmet-async"
 import assets, { audioExamples } from "../assets/assets"
 import EchoIntroSection from "./EchoIntroSection"
 
@@ -123,6 +124,66 @@ const steps = useMemo(() => [
     Math.round(featureProgress * (featureDetails.length - 1))
   )
 
+  const pipeline = [
+    {
+      title: "Record",
+      desc: "The app guides each user through a modest set of their own recordings, including words and phrases that matter in daily life.",
+    },
+    {
+      title: "Adapt",
+      desc: "Echo adapts a Whisper-family base model using a custom LoRA-injection architecture; adapters are only a few MB each, giving up to ~42% relative WER reduction (over 23 percentage points absolute) for individual cerebral-palsy speakers versus the non-personalised baseline.",
+    },
+    {
+      title: "Personalise",
+      desc: "Each user gets a dedicated model that reflects their pronunciation, rhythm, language context, and communication patterns.",
+    },
+    {
+      title: "Power products",
+      desc: "Every ISRI product calls that user's personalised model through the Echo API, so one engine can support many communication jobs.",
+    },
+  ]
+
+  const methods = [
+    {
+      title: "Selective fine-tuning",
+      desc: "We tune a targeted subset of the speech model when a user's voice needs maximum fidelity and careful adaptation.",
+    },
+    {
+      title: "LoRA adapters",
+      desc: "We train tiny per-user plug-ins that are cheaper to train, fast to serve, and important to making personalised ASR scalable.",
+    },
+  ]
+
+  const capabilities = [
+    ["Accurate transcription", "Personalised speech-to-text for non-standard, dysarthric, accented, or fragmented speech."],
+    ["Speech-to-speech correction", "Non-standard input becomes clearer output while preserving the user's intended words."],
+    ["Voice export", "Send voice notes and corrected messages to WhatsApp and other channels."],
+    ["Voice cloning", "Create a digital voice that stays authentically the user's own."],
+    ["Saved recordings", "A personal library the user can revisit and reuse."],
+    ["Dictation Studio", "Capture, organise, and draft longer thoughts by voice — a thinking environment that turns raw speech into clear, actionable output."],
+  ]
+
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Echo",
+    applicationCategory: "AssistiveApplication",
+    operatingSystem: "Web, Android, iOS",
+    url: "https://www.isrinitiative.org/echo",
+    description:
+      "Echo is a personalised ASR engine and AAC app for people with non-standard speech, powered by per-user speech models.",
+    creator: {
+      "@type": "Organization",
+      name: "Inclusive Speech Rights Initiative",
+      url: "https://www.isrinitiative.org/",
+    },
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/LimitedAvailability",
+      category: "Live pilot",
+    },
+  }
+
   const framePath = useMemo(
     () => (index) => {
         const extension = index === 0 ? 'jpeg' : 'jpg';
@@ -226,6 +287,11 @@ const steps = useMemo(() => [
       id="echo"
       className="relative flex flex-col items-center px-4 sm:px-12 lg:px-24 xl:px-40 pt-14 text-gray-700 dark:text-white overflow-x-clip"
     >
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(softwareSchema)}
+        </script>
+      </Helmet>
       <div className="pointer-events-none absolute -top-24 left-0 h-80 w-80 rounded-full bg-primary/20 blur-[90px]" />
       <div className="pointer-events-none absolute top-32 right-0 h-96 w-96 rounded-full bg-blue-400/20 blur-[110px]" />
 
@@ -238,9 +304,7 @@ const steps = useMemo(() => [
             Echo makes communication feel effortless
           </h1>
           <p className="text-sm sm:text-base lg:text-lg max-w-xl lg:max-w-2xl text-gray-600 dark:text-white/75">
-            265 million people live with speech impairments 
-worldwide. Most voice technology was not built 
-for them. Echo personalises to each speaker's 
+            Millions of people with non-standard speech are misheard by mainstream voice technology. Echo personalises to each speaker's 
 unique voice patterns, making communication 
 technology finally work for the people who 
 need it most.
@@ -272,6 +336,106 @@ need it most.
       </section>
 
       <EchoIntroSection className="mt-20 lg:mt-28 pb-20 lg:pb-24" />
+
+      <section className="w-full max-w-6xl mb-20">
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <span className="inline-block text-xs font-medium tracking-[0.2em] text-primary uppercase mb-3">
+              How Echo works
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight">
+              Record, adapt, personalise, then power real products.
+            </h2>
+            <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-white/70 leading-relaxed">
+              Echo does not ask users to sound more standard. It builds a speech model tuned to the person, then lets the app suite call that dedicated model wherever communication needs to happen.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {pipeline.map((step, index) => (
+              <article
+                key={step.title}
+                className="rounded-lg border border-gray-200/80 bg-white/90 p-5 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70"
+              >
+                <span className="text-xs uppercase tracking-[0.24em] text-primary">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mt-3 text-xl font-semibold text-gray-900 dark:text-white">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-white/70">
+                  {step.desc}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full max-w-6xl mb-20">
+        <div className="grid gap-6 lg:grid-cols-2">
+           <article className="rounded-lg border border-emerald-500/20 bg-emerald-500/8 p-6 dark:bg-emerald-500/10">
+             <span className="text-xs uppercase tracking-[0.24em] text-emerald-700 dark:text-emerald-300">
+               Live pilot
+             </span>
+             <h2 className="mt-3 text-3xl sm:text-4xl font-semibold text-gray-900 dark:text-white">
+               Small, deliberate, and real: pilot with a maximum of 20.
+             </h2>
+             <p className="mt-4 text-base leading-relaxed text-gray-600 dark:text-white/72">
+               Echo is live in a small pilot capped at a maximum of 20 for this phase — a choice to prioritise depth of support over scale while unfunded. Our testers include a young man with a severe stammer from a low-income background, a user with mild speech differences from cerebral palsy, and an 11-year-old who is deaf, fitted with a cochlear implant at age five.
+             </p>
+             <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/72">
+               Every adapter trained also feeds back into improving the base model, so accuracy compounds over time.
+             </p>
+           </article>
+
+          <div className="grid gap-4">
+            {methods.map((method) => (
+              <article
+                key={method.title}
+                className="rounded-lg border border-gray-200/80 bg-white/90 p-6 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70"
+              >
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                  {method.title}
+                </h3>
+                <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/72">
+                  {method.desc}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full max-w-6xl mb-20">
+        <div className="text-center max-w-3xl mx-auto">
+          <span className="inline-block text-xs font-medium tracking-[0.2em] text-primary uppercase mb-3">
+            Core capabilities
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight">
+            One AAC app, one personalised speech engine.
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-white/70 leading-relaxed">
+            Echo pairs human communication outcomes with the technical layer needed to make mainstream voice AI work for non-standard speech.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {capabilities.map(([title, desc]) => (
+            <article
+              key={title}
+              className="rounded-lg border border-gray-200/80 bg-white/90 p-5 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70"
+            >
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                {title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-white/70">
+                {desc}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
 
       <div id="echo-story" className="scroll-mt-28" />
 
@@ -543,6 +707,44 @@ need it most.
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="w-full max-w-6xl mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <span className="inline-block text-xs font-medium tracking-[0.2em] text-primary uppercase mb-3">
+            Product family
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 dark:text-white tracking-tight">
+            Build the model once; every product inherits it.
+          </h2>
+          <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-white/70 leading-relaxed">
+            The Echo Engine and Echo App are live and in pilot. Echo Tutor, Lekezi, and VoiceFlow are what we build next on that proven foundation.
+          </p>
+        </div>
+
+        <div className="grid gap-8 md:grid-cols-3">
+          <article className="rounded-xl border border-gray-200/80 bg-white/90 p-6 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70">
+            <span className="text-xs uppercase tracking-[0.24em] text-primary">In development</span>
+            <h3 className="mt-3 text-xl font-semibold text-gray-900 dark:text-white">Echo Tutor</h3>
+            <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-white/70">
+              A learning platform that lets students with disabilities do mathematics by speaking rather than writing. Echo Tutor evaluates thinking through free thinking &amp; brainstorming, guided reflection, and guided solution building with a dedicated mathematics-validation layer.
+            </p>
+          </article>
+          <article className="rounded-xl border border-gray-200/80 bg-white/90 p-6 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70">
+            <span className="text-xs uppercase tracking-[0.24em] text-primary">In development</span>
+            <h3 className="mt-3 text-xl font-semibold text-gray-900 dark:text-white">Lekezi</h3>
+            <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-white/70">
+              A mobile app helping people with speech impairments practise specific real-world goals — saying a name, placing an order, giving an introduction. Lekezi deliberately does not try to change how a person sounds; it optimises for confidence and capability on the goals that matter. Built with therapists and NGOs.
+            </p>
+          </article>
+          <article className="rounded-xl border border-gray-200/80 bg-white/90 p-6 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70">
+            <span className="text-xs uppercase tracking-[0.24em] text-primary">In development</span>
+            <h3 className="mt-3 text-xl font-semibold text-gray-900 dark:text-white">VoiceFlow</h3>
+            <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-white/70">
+              An AI-powered Chrome extension letting people with non-standard speech operate the entire web by voice, using their personalised Echo model. Speak conversationally and let an LLM/agentic layer understand intent and take action.
+            </p>
+          </article>
         </div>
       </section>
       
