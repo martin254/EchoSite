@@ -19,7 +19,7 @@ const OurWork = () => {
       subtitle: "Capture and organise your thoughts by voice",
       description:
         "A personalised dictation and writing tool that uses the same personalised speech model as Echo, but built for capturing, organising, and drafting longer-form thoughts by voice — journal entries, work notes, messages, and ideas — with the accuracy of a model trained on the user's own voice.",
-      image: assets.echo2,
+      image: assets.dictationStudio,
       tag: "Writing",
     },
     {

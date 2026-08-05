@@ -35,6 +35,7 @@ import sautilight from './ISRIforLightbg.png'
 import AITutor from './AITutor.png'
 import echo2 from './Echo2.png'
 import echologo2 from './echologo2.png'
+import dictationStudio from './Dictation_Studio.png'
 
 export const audioExamples = {
   user1: {
@@ -99,7 +100,8 @@ const assets = {
   sautilight,
   AITutor,
   echo2,
-  echologo2
+  echologo2,
+  dictationStudio
 }
 
 export default assets
