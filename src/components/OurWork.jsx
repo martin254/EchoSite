@@ -12,6 +12,7 @@ const OurWork = () => {
         "Transcription, voice cloning, voice-note export & sharing, and a saved recordings library — all tuned to each user's own voice so clearer communication feels effortless.",
       image: assets.echo2,
       tag: "AAC app",
+      link: "/echo",
     },
     {
       title: "Dictation Studio",
@@ -78,6 +79,9 @@ const OurWork = () => {
             className="group relative rounded-lg border border-gray-200/50 dark:border-gray-700/40 bg-white dark:bg-gray-900/60 overflow-hidden hover:shadow-2xl hover:shadow-primary/15 hover:-translate-y-2 transition-all duration-500"
             style={{ boxShadow: '0 4px 24px -4px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)' }}
           >
+            {work.link && (
+              <a href={work.link} className="absolute inset-0 z-20 no-underline" aria-label={`View ${work.title}`} />
+            )}
             <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-transparent to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
             
             <div className="relative overflow-hidden aspect-[16/10]">
