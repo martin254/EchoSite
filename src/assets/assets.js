@@ -38,6 +38,7 @@ import echologo2 from './echologo2.png'
 import dictationStudio from './DictStudio.png'
 import UOB from './UOBLogo.jpg'
 import BegiLawOffices from './BegiLawOffices.jpg'
+import modalLogo from './modal.jpg'
 
 export const audioExamples = {
   user1: {
@@ -82,6 +83,11 @@ export const company_logos = [
     name: "Begi's Law Offices and Chambers",
     light: BegiLawOffices,
     dark: BegiLawOffices
+  },
+  {
+    name: 'Modal',
+    light: modalLogo,
+    dark: modalLogo
   }
 ]
 
