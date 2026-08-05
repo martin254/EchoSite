@@ -36,6 +36,8 @@ import AITutor from './AITutor.png'
 import echo2 from './Echo2.png'
 import echologo2 from './echologo2.png'
 import dictationStudio from './DictStudio.png'
+import UOB from './UOB.png'
+import BegiLawOffices from './BegiLawOffices.jpg'
 
 export const audioExamples = {
   user1: {
@@ -70,6 +72,16 @@ export const company_logos = [
     name: 'CDLI',
     light: cdlilight,
     dark: cdlilight
+  },
+  {
+    name: 'University of Birmingham',
+    light: UOB,
+    dark: UOB
+  },
+  {
+    name: "Begi's Law Offices and Chambers",
+    light: BegiLawOffices,
+    dark: BegiLawOffices
   }
 ]
 
