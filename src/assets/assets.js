@@ -36,7 +36,7 @@ import AITutor from './AITutor.png'
 import echo2 from './Echo2.png'
 import echologo2 from './echologo2.png'
 import dictationStudio from './DictStudio.png'
-import UOB from './UOB.png'
+import UOB from './UOBLogo.jpg'
 import BegiLawOffices from './BegiLawOffices.jpg'
 
 export const audioExamples = {
