@@ -9,9 +9,18 @@ const OurWork = () => {
       status: "LIVE",
       subtitle: "Our first live product, built on the Echo Engine",
       description:
-        "Transcription, dictation studio, voice cloning, voice-note export & sharing, and a saved recordings library — all tuned to each user's own voice so clearer communication feels effortless.",
+        "Transcription, voice cloning, voice-note export & sharing, and a saved recordings library — all tuned to each user's own voice so clearer communication feels effortless.",
       image: assets.echo2,
       tag: "AAC app",
+    },
+    {
+      title: "Dictation Studio",
+      status: "LIVE",
+      subtitle: "Capture and organise your thoughts by voice",
+      description:
+        "A personalised dictation and writing tool that uses the same personalised speech model as Echo, but built for capturing, organising, and drafting longer-form thoughts by voice — journal entries, work notes, messages, and ideas — with the accuracy of a model trained on the user's own voice.",
+      image: assets.echo2,
+      tag: "Writing",
     },
     {
       title: "Echo Tutor",

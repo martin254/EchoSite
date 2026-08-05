@@ -1,0 +1,553 @@
+--- PAGE 1 ---
+C O M P A N Y  &  P R O D U C T  R E F E R E N C E
+MasterReference
+Echo — a personalized speech-recognition engine that
+teaches AI to understand people with non-standard speech,
+and powers a suite of voice-first tools for communication,
+learning, and digital independence.
+ORGANIZATION
+Inclusive Speech Rights Initiative · UK & Kenya
+VERSION
+July 2026 · v1.0
+
+
+--- PAGE 2 ---
+C O N T E N T S
+What's
+inside
+01 Quick reference (boilerplate you can copy straight into forms) 3
+02 About ISRI 3
+03 The problem 4
+04 Our insight and approach 5
+05 Echo — the platform 5
+06 The Echo Engine (deep dive) 6
+07 The Echo App 7
+08 The product suite: Echo Tutor, Lekezi, VoiceFlow 7
+09 Where we are: pilot, history, and traction 9
+10 Technology and stack 10
+11 Competitive landscape and moat 10
+12 Market and impact 11
+13 Business model and sustainability 11
+14 Team 12
+15 Partners and ecosystem 12
+16 Roadmap 13
+17 The ask 13
+ISRI ·Echo —Master Reference
+
+--- PAGE 3 ---
+18 Appendix: reusable boilerplate blocks 14
+01 Quick reference
+Legal name(s): Inclusive Speech Rights Initiative (ISRI) — dual-registered as ISRI UK Limited (United
+Kingdom, company limited by shares) and as a Kenyan entity headquartered in Nairobi.
+Type: Social enterprise (mission-first, with a trading revenue model).
+Founded by: Collins Njau (CEO), Martin Muru (AI Lead), Ruth Kamau (Programmes Director).
+Headquarters: Nairobi, Kenya, with a UK registered entity in London.
+Stage: Pre-seed. Product live and in active pilot; no external funding to date.
+Sector: Inclusive / assistive AI · speech technology · accessibility · disability inclusion · AI for Africa.
+One-sentence description:
+ISRI builds Echo — a personalized speech-recognition engine that teaches AI to understand
+people with non-standard speech (cerebral palsy, stammers, deaf accents, and more), and
+powers a suite of voice-first tools for communication, learning, and digital independence.
+Elevator pitch (30 seconds):
+Modern voice AI was trained on "standard" voices, so it fails the millions of people who speak
+differently — people with cerebral palsy, stammers, Down syndrome, or deaf accents — locking
+them out of education, work, and everyday digital life. ISRI's Echo solves this by personalization:
+instead of forcing people to match a standard voice, we train a custom model on each person's
+own voice. That engine powers a live app and a growing suite of products for learning, speech
+practice, and voice-driven web access. We're built in Kenya, for the communities global voice AI
+overlooks.
+(Longer boilerplate blocks are in the Appendix, Section 18.)
+02 About ISRI
+ISRI — the Inclusive Speech Rights Initiative — is a social enterprise building inclusive voice
+technology for people whose speech mainstream systems do not understand. We operate across
+two jurisdictions: a Kenyan entity headquartered in Nairobi, where our users, research, and pilot
+work are based, and ISRI UK Limited, a UK-registered company that anchors our international
+partnerships, funding, and governance.
+ISRI ·Echo —Master Reference
+
+--- PAGE 4 ---
+Our founding belief: being understood is a right, not a privilege reserved for people who happen to
+speak the way machines expect. We take the name Inclusive Speech Rights seriously — the ability to
+be heard by the technology that increasingly mediates education, employment, healthcare, banking,
+and public services is, in the modern world, a matter of basic inclusion and dignity.
+Our origin. ISRI began as research into whether AI could be made to understand voices it was never
+trained on — specifically Kenyan speakers with cerebral palsy and other non-standard speech, in
+Swahili and English. That research became a working, personalized system, and then a live product.
+The founding team is unusually close: Collins is Martin's older brother, and Ruth is their cousin, who
+grew up alongside them — which gives ISRI unusual trust, speed, and staying power for an early-
+stage venture.
+What we value:
+- Personalization over averaging. We do not ask people to change how they speak; we build
+technology that learns to understand them.
+- Dignity and ownership. Our users are the authors of their own words, learning, and decisions. Our
+tools support them; they never speak for them.
+- Built in the Global South, for the Global South. We build in Kenya, for African languages and
+African users, addressing needs that global products ignore.
+- Honesty about scope. We are clear about what our technology does and does not do — the
+candour that earns the trust of clinical and community partners.
+03 The problem
+Voice is fast becoming the default interface to the digital world — voice assistants, dictation, voice
+notes, and now agentic, voice-driven browsing. For millions of people, that shift is not liberation; it is
+a new wall.
+Commercial automatic speech recognition (ASR) relies on a single universal model trained
+overwhelmingly on typical, fluent, accent-neutral speech. Non-standard speech is, by contrast, 
+high-variability and low-resource: there is little training data, and collecting it is physically effortful
+for the very people who need it most. A one-size-fits-all model will always fail at the tails of the
+distribution — and the tails are exactly where our users live. For many of them, mainstream speech
+recognition fails more often than it succeeds.
+Who is affected: people with cerebral palsy, Down syndrome, stammers/stutters, stroke- and injury-
+related speech changes, Parkinson's disease, and deaf accents, among others — tens of millions of
+people worldwide, and a very large, under-served population across Africa.
+What exclusion looks like in daily life:
+- Voice notes that go unsent, out of fear of being misunderstood.
+- Phone calls and voice interfaces avoided entirely.
+- Voice assistants and dictation tools that simply fail, forcing dependence on caregivers or family for
+basic digital tasks.
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 4 / 16
+
+--- PAGE 5 ---
+- Being underestimated — in classrooms, workplaces, clinics, and services — because a
+communication barrier is misread as a lack of intelligence or capacity.
+The African dimension compounds all of this. Mainstream models already under-serve Swahili and
+local languages before you even reach atypical speech; connectivity and device constraints limit
+access to cloud AI; and there is a near-total absence of accessibility-first products designed for
+these communities. The people who would benefit most from the voice-AI revolution are the least
+served by it.
+The exclusion is not only practical — it is a source of chronic frustration, isolation, and diminished
+dignity. Solving it is both a large market opportunity and a matter of rights.
+04 Our insight and approach
+You cannot solve non-standard speech with one bigger model. You solve it one person at a time.
+Echo's core thesis is personalization. Instead of forcing a person to match a "standard" voice, we
+build a model that learns their voice. The user records a set of phrases; Echo automatically trains a
+lightweight, personalized adapter that learns that individual's pronunciation, rhythm, and articulation;
+and every downstream interaction runs through a model tuned specifically to them.
+This is simultaneously more accurate and more respectful. It is more accurate because a model
+specialized to one speaker vastly outperforms a generic model on that speaker. It is more respectful
+because we are not asking anyone to sound "correct" — we are building technology that has learned
+to understand them as they are.
+Personalized low-rank adaptation for impaired speech is an active international research frontier.
+ISRI's distinction is making it work as a shipped, real-world product — for African speakers and
+languages that global efforts overlook — rather than as a paper.
+05 Echo — the platform
+Echo is not a single app. It is an engine with a growing family of products built on top of it. This is the
+most important thing to understand about the company:
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 5 / 16
+
+--- PAGE 6 ---
+THE ECHO ENGINE
+Personalized ASR · per-user custom LoRA models · served via API
+Build the model once; every product inherits it. Each new user's personalized model also increases
+the value of the whole suite. The engine and app are what we have been building since January
+2026 and are now pilot-testing; the three products are what we build next on that proven foundation.
+06 The Echo Engine (deep dive)
+The Echo Engine is the personalization pipeline that powers everything.
+How it works, end to end:
+1. Enrolment. A user records a set of phrases — between roughly 100 and 1,000 utterances (on the
+order of ten minutes of speech for a usable model). Enrolment is designed to be low-burden,
+because speaking is effortful for many of our users.
+2. Adapter training. Echo automatically trains a custom LoRA (Low-Rank Adaptation) adapter for
+that individual on top of a strong ASR base (a Whisper-family model). The adapter is small — on the
+order of a few megabytes — and learns the person's specific pronunciation, rhythm, and articulation.
+We built a custom LoRA-injection architecture to make this work reliably where off-the-shelf PEFT
+tooling did not.
+3. Storage and serving. Each adapter is stored and served through an API, so any Echo product can
+call it to transcribe or understand that specific person's speech accurately.
+4. Production pipeline. Transcription can be followed by an LLM correction layer (cleaning the
+transcript) and, where wanted, voice reconstruction that renders the output in the speaker's own
+voice — their words, their voice, just clearer.
+Infrastructure: GPU training on Modal (A100-class), with an S3 / Modal / DynamoDB pipeline for
+data, training, storage, and inference. This is a live production system, not a prototype.
+Results: In internal experiments, personalized adapters have reduced word error rate by up to ~42%
+relative (over 23 percentage points absolute) for individual cerebral-palsy speakers versus the non-
+personalized baseline. Every user adapter trained also feeds back into improving the base model, so
+accuracy compounds over time.
+Why this is defensible: the combination of (a) a per-user personalization pipeline that works in
+production, (b) access to a rare Kenyan Swahili non-standard-speech dataset (the CDLI dataset) that
+Echo App
+Transcription, dictation,
+voice cloning, export
+LIVE
+Echo Tutor
+Voice-first mathematics
+for disabled learners
+IN DEV
+Lekezi
+Confidence-building
+speech practice
+IN DEV
+VoiceFlow
+Voice-driven access to
+the whole web
+IN DEV
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 6 / 16
+
+--- PAGE 7 ---
+would take competitors years to replicate, and (c) native handling of Swahili–English code-switching
+rather than a retrofit, gives Echo a compounding, hard-to-copy moat.
+07 The Echo App
+The Echo App is our first live product — the first thing powered by the Echo Engine, and the one in
+pilot today. It gives an individual user direct access to their own personalized model through a set of
+tools:
+Transcription — accurate speech-to-text on the user's own voice.
+Dictation studio — capturing, organizing, and drafting longer thoughts by voice.
+Voice cloning — reproducing the user's own voice for expressive output.
+Voice-note export & sharing — clean audio and transcripts exported into the messaging, email,
+work, and school platforms users already rely on, so Echo becomes a bridge into their existing
+life.
+Saved recordings — a personal library the user can revisit and reuse.
+The Echo App is where users experience, for the first time, being able to speak naturally and be
+understood — without correction, repetition, or the fear of being misheard.
+08 The product suite
+With the engine and app live, ISRI is building three products for the coming quarter, all on the same
+foundation.
+8.1 Echo Tutor — voice-first learning (starting with mathematics)
+What it is: a learning platform that lets students with disabilities — dysgraphia, cerebral palsy, motor
+impairments, non-standard speech — do mathematics by speaking rather than writing.
+The key innovation: most educational tools evaluate answers; Echo Tutor evaluates thinking. It
+follows a three-stage, voice-first workflow that mirrors how learners actually reason:
+1. Free thinking & brainstorming — the student talks through what they notice, possible strategies,
+and relevant ideas, with no judgement or correction. The goal is to capture raw mathematical
+thinking without the burden of writing.
+2. Guided reflection — Echo Tutor asks open-ended questions (What is the problem asking? What
+do you already know? What could be your first step? How would you check your answer?) that turn
+scattered ideas into a structured plan.
+3. Guided solution building — the student walks through each step verbally; the platform
+• 
+• 
+• 
+• 
+• 
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 7 / 16
+
+--- PAGE 8 ---
+transcribes, organizes the steps, surfaces mathematical relationships, generates visuals where
+useful, highlights possible mistakes, and encourages self-correction. A dedicated mathematics-
+validation layer checks calculations and logic for correctness.
+Why it matters: handwriting, typing, and organizing written steps stop being the barrier between a
+capable mind and the subject. Students demonstrate genuine understanding; teachers gain visibility
+into reasoning, not just final answers.
+MVP focus: mathematics. Extends to: science problem-solving, essay planning, critical-thinking
+exercises, programming education, and exam preparation — a voice-first educational ecosystem.
+8.2 Lekezi — confidence-building speech practice
+What it is: a mobile app that helps people with speech impairments (cerebral palsy, Down syndrome,
+deaf accents, and more) practise the specific things they most want to say — and see concrete
+evidence that their delivery is getting stronger.
+What it deliberately does NOT do: it does not try to change how a person sounds, and it does not do
+phonetic correction. It optimizes for the two things that can meaningfully change — confidence and 
+capability on specific real-world goals (saying a name, placing an order, giving an introduction).
+How it works — the reference-text loop: every exercise has a reference phrase the user is aiming to
+say. Echo transcribes their attempt; an LLM layer compares "what they meant to say" against "what
+they actually said" and turns the gap into warm, specific, behavioural coaching ("four weeks ago you
+hesitated on 'cappuccino' every time; now you finish the whole order cleanly in four of five tries;
+your filler words dropped from six to two").
+Five core features: goal-based practice modules; difficulty progression / scaffolding (single word →
+phrase → full scenario, with transfer tracking); instant behavioural feedback; repetition tracking and
+progress visualization; emotional check-ins and confidence self-ratings.
+The measurement insight: because Echo's models are personalized, transcription accuracy rises as
+the model learns the user — which measures the model improving, not the person. Lekezi is
+designed from the ground up to avoid this trap: it measures person-centred signals (filler counts,
+completion time, stumbles, pauses, completion rate, clean-run streaks, self-rated confidence), never
+model accuracy, as evidence of human progress.
+Positioning: a complement to speech therapy, never a replacement — it brings the practice half of
+therapy home, affordably, in the long stretches between scarce and costly sessions. Built with
+therapists and NGOs co-designing the scenario library. Build horizon: a focused three-month plan to
+a working pilot.
+8.3 VoiceFlow — digital independence through voice
+What it is: an AI-powered Chrome extension that lets people with non-standard speech operate the
+entire web by voice, using their personalized Echo model — turning the browser into an intelligent
+accessibility assistant that understands them, not a generic voice.
+Architecture: Echo's personalized ASR sits at the base (understanding what was said); an LLM/
+agentic layer sits above it (understanding intent and taking action). Users speak conversationally —
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 8 / 16
+
+--- PAGE 9 ---
+"help me apply for this job," "read this page to me," "fill in this form" — rather than memorizing rigid
+commands.
+Ten capability areas: intelligent voice navigation; AI form-filling assistant (conversational, field by
+field, with confirmation before submit); webpage reading / "podcast mode"; ask-anything-about-
+this-page; voice document creation and editing (Docs, Word Online, email); video navigation
+assistant; intelligent research assistant; agentic multi-step task completion ("help me renew my
+passport" → finds the site, navigates, completes forms with the user's guidance, reviews, assists
+through submission); education companion; and a personalized accessibility companion that learns
+each user's preferences over time.
+Why it matters: it shifts accessibility from reactive command-following to proactively helping users
+accomplish real goals online — restoring independence in education, employment, banking, and
+government services, and reducing dependence on caregivers for everyday digital tasks.
+09 Where we are: pilot, history, and traction
+We are in active pilot testing.
+Version 1 (2025). We fine-tuned a Whisper model on non-standard Kenyan Swahili speech data,
+collected in partnership with the Maria Njeri Foundation, with GPU support from Modal. This proved a
+fine-tuned model could understand voices mainstream systems could not — but it was a single
+shared model, not personalized. We tested it with 10 users, processing hundreds of recordings in
+production.
+Version 2 (2026 — current). We cracked per-user personalization — the leap that turns "better than
+nothing" into "understands you." We are now piloting with a deliberately small, diverse cohort of 5
+users, capped at a maximum of 10 for this phase. This constraint is a choice, not a limitation we're
+hiding: without funding yet, we are prioritizing depth over scale — intensive, personal support for
+each tester so we deeply understand their needs and build the right things next. We collect as much
+feedback as possible and iterate on it directly. Funding and support would let us scale this while
+keeping the quality of support high.
+The pilot cohort is intentionally diverse, so Echo is stress-tested across genuinely different acoustic
+and human profiles. Illustrative testers:
+- A young man with a severe stammer, from a low-income background — for whom being
+understood is also a route to opportunity he has been shut out of.
+- A user with mild speech differences from cerebral palsy.
+- An 11-year-old who is deaf, fitted with a cochlear implant at age five, with resulting speech
+differences.
+Traction and validation to date:
+- A working, personalized ASR engine — the hard technical problem — solved and running in
+production (up to ~42% relative WER reduction in internal tests).
+- A live Echo App in real users' hands.
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 9 / 16
+
+--- PAGE 10 ---
+- Users reporting, in co-design, being able to speak naturally for the first time without fear of
+correction.
+- A rare proprietary dataset (CDLI Kenyan Swahili non-standard speech) underpinning the models.
+- Published technical writing documenting both the v1 approach and the v2 personalization
+breakthrough.
+- Three additional products fully specified and ready to build on the proven engine.
+10 Technology and stack
+Base ASR: Whisper-family models, adapted per user.
+Personalization: custom LoRA-injection architecture producing small (~few-MB) per-user
+adapters from ~100–1,000 utterances; solves off-the-shelf PEFT/Whisper incompatibilities.
+Language intelligence layer: an LLM sits above the ASR for transcript correction, reasoning,
+coaching feedback (Lekezi), reflective tutoring (Echo Tutor), and intent/agentic action
+(VoiceFlow). This layer is model-flexible — it currently runs on a leading LLM and can be pointed
+at whichever model best fits a given deployment or funder (e.g. Gemini, Claude), including open
+models (e.g. Gemma) for on-device, offline, privacy-preserving use in low-connectivity settings.
+Voice output: optional voice-reconstruction so output can be rendered in the speaker's own
+voice.
+Infrastructure: Modal (A100-class GPU training), S3, DynamoDB; adapters stored and served via
+API. Live production system.
+Roadmap direction: scaling the personalization and inference pipeline for many concurrent
+users, and moving toward on-device deployment for offline, private use.
+Note for funder-specific applications: where a programme requires a particular model family to be
+materially load-bearing (e.g. Google's Gemini/Gemma/Veo), position the intelligence layer on that
+family — Gemini for reasoning and agentic action across all three products, Gemma for on-device
+personalized deployment. The architecture is designed to accommodate this.
+11 Competitive landscape and moat
+The landscape: the closest reference points are Voiceitt (speech recognition for non-standard
+speech) and Google's Project Euphonia / Project Relate (research and tools for atypical speech).
+These validate the problem and the personalization direction at a global level.
+Where ISRI is different and defensible:
+- True per-user personalization in production, not a generic "atypical speech" model.
+- Africa-first and language-native: built for Kenyan Swahili and Swahili–English code-switching from
+• 
+• 
+• 
+• 
+• 
+• 
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 10 / 16
+
+--- PAGE 11 ---
+the ground up, not retrofitted — a market global players do not prioritize.
+- A rare proprietary dataset (CDLI Kenyan Swahili non-standard speech) that would take competitors
+years to replicate.
+- A compounding data moat: every personalized adapter trained improves the base model.
+- A platform, not a feature: one engine powering a suite (app + tutor + practice + web access), so
+the moat deepens with each product.
+12 Market and impact
+Scale. Non-standard speech affects tens of millions of people globally and a very large, under-
+served population across Africa (cerebral palsy, Down syndrome, stroke, injury, stammers, deaf
+accents, and more). These communities are almost entirely un-served by the current wave of voice
+AI.
+Impact themes:
+- Future of work — VoiceFlow restores the ability to apply for jobs, complete online tasks, and work
+independently.
+- Future of knowledge / education — Echo Tutor lets disabled learners demonstrate real
+understanding and learn by conversation; Lekezi extends scarce speech-therapy expertise.
+- Health and dignity — being understood is tied directly to mental health, inclusion, and quality of life
+across every point of care and service.
+- Disability inclusion — accessibility-first products for communities global technology overlooks,
+aligned with rising disability-inclusion mandates.
+13 Business model and sustainability
+ISRI is a social enterprise: mission-first, with a trading revenue model designed so that commercial
+income funds reach into the communities that need it most.
+Revenue paths:
+- Institutional / B2B & B2NGO: healthcare providers, schools, disability organizations, and therapists
+pay per API call / per seat for accessibility, increasingly driven by disability-inclusion compliance
+mandates.
+- Individuals: access to a tool that finally understands them, across the Echo App and product suite.
+- Programmes & partners: NGOs and partners fund cohort-based deployments (especially for Lekezi
+and Echo Tutor) as measurable accessibility interventions.
+Dual-entity structure: ISRI UK Limited anchors international funding, partnerships, and governance;
+the Kenyan entity delivers on the ground. This structure supports both grant/impact funding and
+commercial trading revenue, and lets us pursue UK- and Africa-facing opportunities in parallel.
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 11 / 16
+
+--- PAGE 12 ---
+14 Team
+The founding team combines AI research, production software engineering, and public-health
+programme design — and the three co-founders are family, which gives ISRI unusual trust, speed,
+and staying power.
+Collins Njau — Co-Founder & CEO.
+The founder who set ISRI in motion; leads its vision and direction. A software engineer with roughly
+eight years building production-grade systems, including roles at Andela and 2U Inc., where he
+automated engineering-placement processes and built asset-management platforms used at scale.
+Completing a BSc in Mathematics and Computing; works across Python, Ruby, JavaScript, AWS, and
+Docker. Built much of Echo's product stack, user dashboard, and deployment — turning the research
+into software real users can hold. Author of ISRI's founding public writing on inclusive speech
+technology.
+Martin Muru — Co-Founder & AI Lead.
+Leads Echo's core intelligence — the personalized ASR engine and the technical architecture across
+every product. MSc in Artificial Intelligence & Machine Learning (University of Birmingham, 2024,
+Distinction) and a First-Class BSc in Computer Science (Strathmore University, 2019); prior
+experience at KPMG East Africa and iLabAfrica. Engineered Echo's custom LoRA-injection
+architecture and Modal GPU training pipeline, and cracked the per-user personalization that defines
+the product (up to ~42% relative / 23+ percentage-point WER reduction for cerebral-palsy
+speakers). Owns model training, evaluation, and the infrastructure that keeps improvements safe and
+measurable.
+Ruth Kamau — Co-Founder & Programmes Director.
+Keeps ISRI grounded in real communities and real need. Holds a Bachelor's in Population and
+Reproductive Health and a Master's in Public Health, and is certified in Monitoring & Evaluation.
+Extensive experience designing survivor-centred programming, health initiatives, and economic-
+empowerment pathways for marginalized youth. Leads pilot delivery, partner relationships, and the
+impact measurement that proves Echo changes lives, not just error rates.
+Wider team. Supported by a programmes and evaluation team, including Sheila Odhiambo
+(programme rigour and evaluation) and Daisy Langat (keeping the people we build for at the centre
+of every decision) — a small, multidisciplinary group spanning AI, software engineering, and
+inclusive development.
+15 Partners and ecosystem
+Maria Njeri Foundation — community partner and collaborator on non-standard speech data
+collection.
+• 
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 12 / 16
+
+--- PAGE 13 ---
+Modal — GPU compute (A100-class) supporting model training.
+CDLI dataset — access to a rare Kenyan Swahili non-standard-speech dataset underpinning the
+models.
+Speech therapists & disability NGOs — co-design partners for Lekezi's scenario library and for
+pilot delivery (actively being expanded).
+Inclusive-ASR research community — engagement with the international assistive-technology
+and disability-innovation ecosystem (including the UCL Global Disability Innovation Hub
+ecosystem).
+(Keep this section current as partnerships formalize; funders weight demonstrated partnerships
+heavily.)
+16 Roadmap
+Now → next quarter:
+1. Deepen, then scale the pilot — move from an intensive 5–10-user cohort to a funded, larger, more
+diverse rollout, without losing the personal support that makes the feedback valuable.
+2. Ship the three products — take Echo Tutor (maths MVP), Lekezi (three-month build to pilot), and
+VoiceFlow from spec to working MVPs on the proven Echo Engine.
+3. Harden the platform — scale the personalization and inference pipeline for many concurrent
+users; move toward on-device deployment for offline, private use.
+4. Formalize partnerships and evidence — sign therapist/NGO partners, and produce measurable
+person-centred outcome data from the pilots.
+17 The ask
+ISRI has already done the zero-to-one: we took world-class research on personalized ASR and made
+it a working product for real users, with no external funding. We are seeking the models, mentorship,
+compute, and capital to take Echo from a 5-person pilot to a platform that makes the digital world
+accessible to every voice — scaling the pilot, shipping the three products, and hardening the
+infrastructure.
+(Tailor the specific ask — grant size, accelerator, compute credits, partnership — to each
+application. See the tailored briefs for individual programmes.)
+• 
+• 
+• 
+• 
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 13 / 16
+
+--- PAGE 14 ---
+18 Appendix: reusable boilerplate blocks
+Copy these directly into applications. Trim to the word limit as needed.
+18.1 One-sentence descriptions (pick by emphasis)
+Platform + impact (default):
+ISRI builds Echo, a personalized speech-recognition engine that teaches AI to understand the
+millions of Africans with non-standard speech — cerebral palsy, stammers, deaf accents, and
+more — and powers voice-first tools for learning, communication, and digital independence.
+Punchy / short:
+ISRI builds Echo — voice AI that learns to understand people whose speech mainstream systems
+ignore, unlocking education, work, and digital independence for millions across Africa.
+Product-concrete:
+ISRI builds Echo, a personalized ASR engine that trains a custom model on each user's own
+voice, and powers a suite of tools for learning (Echo Tutor), speech practice (Lekezi), and voice-
+driven web access (VoiceFlow).
+18.2 Short "about" paragraph (~60 words)
+ISRI (the Inclusive Speech Rights Initiative) is a UK/Kenya social enterprise building Echo — a
+personalized speech-recognition engine for people whose voices mainstream AI fails, including
+those with cerebral palsy, stammers, and deaf accents. Instead of forcing people to match a
+"standard" voice, Echo trains a custom model on each user's own speech, and powers a suite of
+voice-first accessibility products.
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 14 / 16
+
+--- PAGE 15 ---
+18.3 Medium "about" paragraph (~120 words)
+ISRI (the Inclusive Speech Rights Initiative) is a social enterprise, registered in the UK and Kenya,
+building inclusive voice technology for the tens of millions of people whose speech mainstream
+systems don't understand — people with cerebral palsy, Down syndrome, stammers, stroke- or
+injury-related speech changes, and deaf accents. Modern voice AI was trained on "standard"
+voices and fails everyone else, locking them out of education, work, and everyday digital life.
+ISRI's answer is Echo: a personalization engine that trains a custom speech-recognition model
+on each user's own voice, so technology learns to understand them rather than the other way
+around. Echo powers a live app and a growing suite — a voice-first maths tutor, a speech-
+practice companion, and a voice-driven web assistant. Built in Kenya, for the communities global
+voice AI overlooks.
+18.4 Problem statement (~50 words)
+Standard speech AI fails a large share of the time for people with cerebral palsy, dysarthria,
+stammers, or non-standard accents — effectively excluding them from healthcare, education,
+and work. Our customers are healthcare providers, schools, and institutions serving these
+communities across Kenya and Africa, alongside the individuals themselves.
+18.5 Solution statement (~50 words)
+Echo builds a personalized speech-recognition adapter per user — a small model trained from
+about ten minutes of their audio — instead of forcing diverse voices into one generic model.
+Institutions pay per API call or seat for accessibility; individuals finally get a voice tool that
+understands them.
+18.6 Competitive-advantage statement (~50 words)
+We personalize per user in production, not with a generic "atypical speech" model. We hold rare
+access to a Kenyan Swahili non-standard-speech dataset competitors would need years to
+replicate, and we're built natively for Swahili–English code-switching. Every user adapter
+improves our base model, compounding our accuracy over time.
+18.7 Taglines
+Teaching AI to hear the voices it was never trained on.
+Every voice understood.
+Being understood is a right, not a privilege.
+We don't change how you speak. We build technology that learns to understand you.
+• 
+• 
+• 
+• 
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 15 / 16
+
+--- PAGE 16 ---
+18.8 Mission statement
+ISRI exists to make the digital world understand every voice — so that people with non-standard
+speech are included, on equal terms, in education, work, and public life. We build personalized
+voice technology that learns each individual, because being heard is a right, not a privilege.
+18.9 Stock answers to common application questions
+"What problem are you solving?" — See 18.4.
+"What is your solution / product?" — See 18.5, plus: Echo is an engine (per-user personalized ASR
+served via API) powering a live app and three products in development — Echo Tutor (voice-first
+maths for disabled learners), Lekezi (confidence-building speech practice), and VoiceFlow (voice-
+driven web access).
+"What stage are you at?" — Pre-seed. Engine and app live and in active pilot with a diverse cohort
+of 5 users (capped at 10 this phase, by choice, to keep support depth high). v1 tested with 10 users in
+2025; v2 personalization cracked and in production in 2026. No external funding to date.
+"Why you / why this team?" — A close-knit founding team (two brothers and a cousin) combining AI
+research (Martin, MSc AI/ML), production software engineering (Collins, ex-Andela/2U), and public-
+health programme design (Ruth, MPH, M&E). We've already taken personalized ASR from research to
+a shipped product for real users, unfunded.
+"What's your traction?" — Live production engine with up to ~42% relative WER reduction for
+individual CP speakers; live app in users' hands; active diverse pilot; rare proprietary dataset; three
+products specified and ready to build.
+"What do you need / the ask?" — Models/compute, mentorship, and capital to scale the pilot, ship
+the three products, and harden the infrastructure toward on-device deployment. (Tailor specifics per
+application.)
+ISRI · Echo — teaching AI to hear the voices it was never trained on.
+ISRI · Echo — teaching AI to hear the voices it was never trained on.
+MASTER REFERENCE
+ISRI ·Echo —Master Reference 16 / 16

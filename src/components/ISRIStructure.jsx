@@ -8,11 +8,11 @@ const ISRIStructure = () => {
       title: "ISRI Kenya Limited",
       subtitle: "Social Enterprise - Nairobi, Kenya",
       body:
-        "Our Kenyan entity leads all community-embedded programmes, pilot deployments, user research, and partnerships on the ground. ISRI Kenya works directly with people with speech impairments, caregivers, healthcare providers, and educators to co-create solutions that are grounded in real lived experience.",
+        "Our Kenyan entity leads Echo pilot deployments, user research, community partnerships, and product learning on the ground. ISRI Kenya works directly with people with speech impairments, caregivers, healthcare providers, and educators to co-create solutions grounded in real lived experience.",
       tags: [
-        "Community Programmes",
-        "Pilot Deployments",
+        "Echo Pilot Deployments",
         "User Research",
+        "Product Learning",
         "Ground Operations",
       ],
     },

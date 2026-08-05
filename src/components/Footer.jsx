@@ -7,56 +7,51 @@ const Footer = ({ theme }) => {
       text-gray-700 dark:text-gray-200 overflow-hidden
       border-t border-gray-200/70 dark:border-white/10"
     >
-      {/* Background */}
       <div className="absolute inset-0 -z-10
         bg-gradient-to-b
         from-slate-50 to-white
         dark:from-slate-950 dark:to-slate-900"
       />
 
-      {/* Glow line */}
       <div className="absolute top-0 left-0 right-0 h-px
         bg-gradient-to-r from-transparent via-indigo-500/40 to-transparent
         dark:via-indigo-400/30"
       />
 
-      {/* Top section */}
       <div className="flex justify-between max-lg:flex-col gap-12">
-        {/* Left */}
         <div className="space-y-5 max-w-md">
           <img
             src={theme === 'dark' ? assets.sautilogo : assets.sautilight}
             className="w-36"
-            alt="Sauti Yetu Initiative"
+            alt="Inclusive Speech Rights Initiative logo"
           />
 
           <p className="text-sm opacity-80">
-            Inclusive Speech Rights Initiative (ISRI) — Inclusive communication, without barriers.
-            Building ethical, community-rooted assistive technology across Kenya and the United Kingdom.
+            Inclusive Speech Rights Initiative (ISRI) - inclusive communication, without barriers.
+            Building ethical, community-rooted speech AI across Kenya and the United Kingdom.
           </p>
 
           <p className="text-xs opacity-60">
-            Kenya (community programmes) · United Kingdom (international operations)
+            Kenya (Echo pilots and user research) - United Kingdom (international operations)
           </p>
 
           <ul className="flex gap-6 text-sm pt-2">
             <li><a href="/#hero" className="hover:text-primary transition">Home</a></li>
             <li><a href="/blog" className="hover:text-primary transition">Blog</a></li>
             <li><a href="/#about-cbo" className="hover:text-primary transition">About Us</a></li>
-            <li><a href="/#our-work" className="hover:text-primary transition">Projects</a></li>
+            <li><a href="/#our-work" className="hover:text-primary transition">Products</a></li>
             <li><a href="/#team" className="hover:text-primary transition">Team</a></li>
             <li><a href="/#contact-us" className="hover:text-primary transition">Contact</a></li>
           </ul>
         </div>
 
-        {/* Right */}
         <div className="max-w-md">
           <h3 className="font-semibold text-sm mb-2">
             Subscribe to our newsletter
           </h3>
 
           <p className="text-sm opacity-70 mb-5">
-            Updates on projects, partnerships, and community research.
+            Updates on Echo, partnerships, and inclusive speech AI research.
           </p>
 
           <div className="flex gap-3">
@@ -80,17 +75,15 @@ const Footer = ({ theme }) => {
         </div>
       </div>
 
-      {/* Divider */}
       <div className="my-8 h-px bg-gradient-to-r from-transparent via-gray-300/40 to-transparent dark:via-white/10" />
 
-      {/* Bottom */}
       <div className="flex flex-wrap items-center justify-between gap-4 text-xs opacity-60">
         <p>
-          © 2026 Inclusive Speech Rights Initiative — All rights reserved.
+          Copyright 2026 Inclusive Speech Rights Initiative - All rights reserved.
         </p>
 
         <div className="flex gap-4">
-          <a href="https://www.linkedin.com/company/sauti-yetu-initiative/" className="hover:opacity-100 transition">
+          <a href="https://www.linkedin.com/company/inclusive-speech-rights-initiative" className="hover:opacity-100 transition">
             <img src={assets.linkedin_icon} alt="LinkedIn" className="w-5" />
           </a>
           <a href="#" className="hover:opacity-100 transition">

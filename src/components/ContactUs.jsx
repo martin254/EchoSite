@@ -128,7 +128,7 @@ const ContactUs = () => {
                 <div>
                   <label className="text-sm font-medium text-gray-700 dark:text-white/80">Name</label>
                   <div className="mt-2 flex items-center gap-3 rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white/60 dark:bg-gray-800/40 px-4 focus-within:ring-2 focus-within:ring-primary/30 focus-within:border-primary/30 transition-all">
-                    <img src={assets.person_icon} alt="" className="w-4 opacity-50" />
+                    <img src={assets.person_icon} alt="Name field icon" className="w-4 opacity-50" />
                     <input
                       name="name"
                       type="text"
@@ -142,7 +142,7 @@ const ContactUs = () => {
                 <div>
                   <label className="text-sm font-medium text-gray-700 dark:text-white/80">Email</label>
                   <div className="mt-2 flex items-center gap-3 rounded-xl border border-gray-200/60 dark:border-gray-700/50 bg-white/60 dark:bg-gray-800/40 px-4 focus-within:ring-2 focus-within:ring-primary/30 focus-within:border-primary/30 transition-all">
-                    <img src={assets.email_icon} alt="" className="w-4 opacity-50" />
+                    <img src={assets.email_icon} alt="Email field icon" className="w-4 opacity-50" />
                     <input
                       name="email"
                       type="email"
@@ -183,7 +183,7 @@ const ContactUs = () => {
                   }`}
                 >
                   {loading ? "Sending..." : "Send message"}
-                  {!loading && <img src={assets.arrow_icon} alt="" className="w-4" />}
+                  {!loading && <img src={assets.arrow_icon} alt="Send message" className="w-4" />}
                 </button>
               </div>
             </form>

@@ -10,15 +10,15 @@ const CBOOverview = () => {
   const highlights = [
     {
       title: "Human-centred + co-created",
-      desc: "We build with people with speech impairments, caregivers, service providers, and communities — not for them.",
+      desc: "We build with people with speech impairments, caregivers, service providers, and communities - not for them.",
     },
     {
       title: "Rights-based + inclusive",
       desc: "Grounded in dignity, autonomy, safety, and equal access to services and opportunities.",
     },
     {
-      title: "Systems-strengthening",
-      desc: "Designed to integrate into health, protection, education, and community pathways.",
+      title: "Africa-first + multilingual",
+      desc: "Designed for code-switching, local languages, and offline contexts that global voice AI often under-serves.",
     },
     {
       title: "Ethical + responsible technology",
@@ -36,7 +36,7 @@ const CBOOverview = () => {
 
       <Title
         title="What we do"
-        desc="Inclusive Speech Rights Initiative (ISRI)"
+        desc="A rights-based product company building personalised speech AI for people mainstream voice technology mishears."
       />
 
       <div className="w-full max-w-6xl">
@@ -44,7 +44,7 @@ const CBOOverview = () => {
           <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-primary/12 blur-[80px]" />
           <div className="pointer-events-none absolute -bottom-28 left-10 h-60 w-60 rounded-full bg-cyan-300/14 blur-[90px]" />
           <p className="relative z-10 text-base sm:text-lg leading-relaxed text-gray-700 dark:text-white/85 w-full">
-            We address a critical and often overlooked barrier to inclusion: communication. Many people with speech impairments face exclusion from essential information, healthcare, protection mechanisms, education, and economic opportunity — not because they lack ability, but because systems are not communication-friendly.
+            Voice is now a primary interface for dictation, assistants, captioning, hands-free control, banking, public services, education, and work. Yet mainstream speech recognition is trained around standard speech, so people with cerebral palsy, Down syndrome, stroke or brain injury, severe stutters, Deaf or cochlear-implant speech, Parkinson's, and other non-standard speech patterns are routinely misheard. When keyboard or touchscreen fallback is not viable, that misrecognition can force dependence on caregivers for private tasks.
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -67,8 +67,8 @@ const CBOOverview = () => {
                 Mission
               </p>
               <p className="relative z-10 text-base text-gray-600 dark:text-white/70 leading-relaxed">
-                To design inclusive, technology-enabled solutions that prevent harm, strengthen protection, improve access
-                to services, and support recovery and reintegration for people with speech impairments.
+                To build inclusive speech technology that helps people with non-standard speech communicate privately,
+                access services, learn, work, and participate with autonomy.
               </p>
             </div>
 
@@ -80,7 +80,8 @@ const CBOOverview = () => {
               </p>
               <p className="relative z-10 text-base text-gray-600 dark:text-white/70 leading-relaxed">
                 <span className="font-semibold text-gray-900 dark:text-white">ECHO</span>{" "}
-                is our assistive communication engine that improves clarity while preserving user identity and intent.
+                is our personalised voice AI engine. It adapts to an individual speaker so products can recognise,
+                clarify, and preserve their own words and voice.
               </p>
             </div>
           </div>

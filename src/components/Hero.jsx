@@ -5,20 +5,22 @@ const Hero = () => {
 return (
     <div id='hero' className='flex flex-col items-center gap-6 py-20 px-4 sm:px-12 lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white'>
         <div className='inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full'>
-            <img className='w-20' src={assets.group_profile} alt='' loading="lazy"/>
+            <img className='w-20' src={assets.group_profile} alt='People connected by inclusive communication technology' loading="lazy"/>
             <p className='text-xs font-medium'>Inclusive communication without barriers.</p>
         </div>
         <h1 className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium xl:leading-[95px] max-w-5xl'>
             Everyone deserves to be heard, <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent'> and understood.</span>
         </h1>
 
-<p className='text-sm sm:text-lg font-medium max-w-4/5 sm:max-w-3xl pb-3'>
-          Inclusive Speech Rights Initiative (ISRI) is a Kenya–UK social enterprise building inclusive speech technologies for people with speech impairments. Through Echo, Africa's first personalised speech recognition engine, we help ensure that non-standard voices are recognised, understood, and included in a world increasingly powered by AI.<br/>
-          <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent font-medium'>Because access, opportunity, and dignity should never depend on how someone speaks.</span></p>
+        <p className='text-sm sm:text-lg font-medium max-w-4/5 sm:max-w-3xl pb-3'>
+          <span className='block text-base sm:text-xl text-gray-900 dark:text-white mb-3'>Personalised voice AI for people with non-standard speech.</span>
+          Inclusive Speech Rights Initiative (ISRI) is a Kenya-UK social enterprise building inclusive speech technologies for people with speech impairments. Through Echo, our Africa-first personalised speech recognition engine, we help ensure that non-standard voices are recognised, understood, and included in a world increasingly powered by AI.<br/>
+          <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text text-transparent font-medium'>Because access, opportunity, and dignity should never depend on how someone speaks.</span>
+        </p>
 
         <div className='relative'>
-            <img src={assets.echohero} alt='' className='w-full max-w-6xl rounded-4xl' loading="lazy"/>
-            <img src={assets.bgImage1} alt='' className='absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden' loading="lazy"/>
+            <img src={assets.echohero} alt='Echo mobile app interface for personalised speech recognition' className='w-full max-w-6xl rounded-4xl' loading="lazy"/>
+            <img src={assets.bgImage1} alt='Soft abstract background shape behind the Echo product preview' className='absolute -top-40 -right-40 sm:-top-100 sm:-right-70 -z-1 dark:hidden' loading="lazy"/>
         </div>
     </div>
   )

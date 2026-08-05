@@ -2,16 +2,9 @@ import logo from './logo.svg'
 import arrow_icon from './arrow_icon.svg'
 import group_profile from './Group2.png'
 import bgImage1 from './bgImage1.png'
-import bgImage2 from './bgImage2.png'
-import hero_img from './hero_img.png'
-import ads_icon from './ads_icon.svg'
-import content_icon from './content_icon.svg'
-import marketing_icon from './marketing_icon.svg'
-import social_icon from './social_icon.svg'
 import menu_icon from './menu_icon.svg'
 import close_icon from './close_icon.svg'
 import work_mobile_app from './work_mobile_app.png'
-import work_fitness_app from './work_fitness_app.png'
 import work_dashboard_management from './work_dashboard_management.png'
 import email_icon from './email_icon.svg'
 import person_icon from './person_icon.svg'
@@ -23,16 +16,10 @@ import logo_dark from './logo_dark.svg'
 import menu_icon_dark from './menu_icon_dark.svg'
 import sun_icon from './sun_icon.svg'
 import moon_icon from './moon_icon.svg'
-import echodark from './echodark.png'
-import echolight from './echolight.png'
-import heroimage from './heroimage.png'
 import gdihub from './gdihub.svg'
 import strathlogo from './Strathmore-University-Logo.png'
 import senseshub from './senseshub.jpg'
-import Lulu from './Lulu.png'
-import Nena from './Nena.png'
 import Neema from './Neema.jpeg'
-import safespace from './safespace.png'
 import simulizi from './simulizi.png'
 import ruth from './Ruth.jpg'
 import njauprof from './njauprof.jpg'
@@ -45,11 +32,8 @@ import strathdark from './strathdarkness.png'
 import cdlilight from './cdlilogo.svg'
 import sautilogo from './ISRIforDark.png'
 import sautilight from './ISRIforLightbg.png'
-import livelihods from './Livelihoods.png'
 import AITutor from './AITutor.png'
-import mentalhealth from './mentalhealth.png'
 import echo2 from './Echo2.png'
-import echologo from './Echologo.jpeg'
 import echologo2 from './echologo2.png'
 
 export const audioExamples = {
@@ -93,16 +77,9 @@ const assets = {
   arrow_icon,
   group_profile,
   bgImage1,
-  bgImage2,
-  hero_img,
-  ads_icon,
-  content_icon,
-  marketing_icon,
-  social_icon,
   menu_icon,
   close_icon,
   work_mobile_app,
-  work_fitness_app,
   work_dashboard_management,
   email_icon,
   person_icon,
@@ -114,22 +91,14 @@ const assets = {
   menu_icon_dark,
   sun_icon,
   moon_icon,
-  echodark,
-  echolight,
-  heroimage,
-  Lulu,
-  Nena,
   Neema,
-  safespace,
   simulizi,
+  senseshub,
   echohero,
   sautilogo,
   sautilight,
-  livelihods,
   AITutor,
-  mentalhealth,
   echo2,
-  echologo,
   echologo2
 }
 

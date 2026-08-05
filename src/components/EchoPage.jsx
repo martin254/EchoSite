@@ -100,24 +100,6 @@ const steps = useMemo(() => [
       desc:
         "Corrected transcript spoken back in the user's own voice; same identity, made clear.",
     },
-    {
-      label: "Feature 04",
-      title: "Dictation Studio(My Thoughts)",
-      desc:
-        "My Thoughts is a voice-first thinking environment. Users speak freely; no prompts, no structure, and Echo transforms raw speech into clear, actionable output.",
-    },
-    {
-      label: "Feature 04",
-      title: "Dictation Studio",
-      desc:
-        "Raw transcript with word-level playback. Tap any word to correct it by voice.",
-    },
-    {
-      label: "Feature 04",
-      title: "Dictation Studio",
-      desc:
-        "Refine the Transcript with one tap. Turn speech into a message, plan, summary, or formal document.",
-    },
   ], [])
   const activeFeatureIndex = Math.min(
     featureDetails.length - 1,
@@ -154,7 +136,6 @@ const steps = useMemo(() => [
     ["Voice export", "Send voice notes and corrected messages to WhatsApp and other channels."],
     ["Voice cloning", "Create a digital voice that stays authentically the user's own."],
     ["Saved recordings", "A personal library the user can revisit and reuse."],
-    ["Dictation Studio", "Capture, organise, and draft longer thoughts by voice — a thinking environment that turns raw speech into clear, actionable output."],
   ]
 
   const softwareSchema = {
@@ -584,7 +565,7 @@ need it most.
       {/* Features Section */}
       <section
         ref={featureSectionRef}
-        className="w-full max-w-6xl mt-16 lg:mt-8 mb-16 lg:min-h-[380vh]"
+        className="w-full max-w-6xl mt-16 lg:mt-8 mb-16 lg:min-h-[220vh]"
       >
         <div className="text-center max-w-3xl mx-auto">
           <span className="inline-block text-xs font-medium tracking-[0.2em] text-primary uppercase mb-3">
@@ -701,7 +682,7 @@ need it most.
         </div>
       </section>
 
-      <section className="w-full max-w-6xl mb-20">
+      <section className="w-full max-w-6xl mt-16 lg:mt-8 mb-12">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="inline-block text-xs font-medium tracking-[0.2em] text-primary uppercase mb-3">
             Product family
@@ -710,11 +691,18 @@ need it most.
             Build the model once; every product inherits it.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-gray-600 dark:text-white/70 leading-relaxed">
-            The Echo Engine and Echo App are live and in pilot. Echo Tutor, Lekezi, and VoiceFlow are what we build next on that proven foundation.
+            The Echo Engine, Echo App, and Dictation Studio are live and in pilot. Echo Tutor, Lekezi, and VoiceFlow are what we build next on that proven foundation.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <article className="rounded-xl border border-emerald-500/15 bg-emerald-500/5 p-6 shadow-sm dark:border-emerald-500/20 dark:bg-emerald-500/5">
+            <span className="text-xs uppercase tracking-[0.24em] text-emerald-700 dark:text-emerald-300">LIVE</span>
+            <h3 className="mt-3 text-xl font-semibold text-gray-900 dark:text-white">Dictation Studio</h3>
+            <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-white/70">
+              Capture and organise your thoughts by voice — in a model trained to understand you. A personalised dictation and writing tool for journal entries, work notes, messages, and ideas.
+            </p>
+          </article>
           <article className="rounded-xl border border-gray-200/80 bg-white/90 p-6 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70">
             <span className="text-xs uppercase tracking-[0.24em] text-primary">In development</span>
             <h3 className="mt-3 text-xl font-semibold text-gray-900 dark:text-white">Echo Tutor</h3>
