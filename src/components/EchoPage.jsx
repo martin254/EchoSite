@@ -131,7 +131,7 @@ const steps = useMemo(() => [
     },
     {
       title: "Adapt",
-      desc: "Echo adapts a Whisper-family base model using a custom LoRA-injection architecture; adapters are only a few MB each, giving up to ~42% relative WER reduction (over 23 percentage points absolute) for individual cerebral-palsy speakers versus the non-personalised baseline.",
+      desc: "Echo builds a small, personalised model for each user, trained on their own voice. It's lightweight, fast to train, and cheap to serve — giving up to ~42% relative WER reduction (over 23 percentage points absolute) for individual cerebral-palsy speakers versus the non-personalised baseline.",
     },
     {
       title: "Personalise",
@@ -143,16 +143,10 @@ const steps = useMemo(() => [
     },
   ]
 
-  const methods = [
-    {
-      title: "Selective fine-tuning",
-      desc: "We tune a targeted subset of the speech model when a user's voice needs maximum fidelity and careful adaptation.",
-    },
-    {
-      title: "LoRA adapters",
-      desc: "We train tiny per-user plug-ins that are cheaper to train, fast to serve, and important to making personalised ASR scalable.",
-    },
-  ]
+  const method = {
+    title: "Personalised for every user",
+    desc: "We build a small, personalised model for each user, trained on their own voice. It's lightweight, fast to train, and cheap to serve — which is what makes personalised accuracy viable for every user, not just a few.",
+  }
 
   const capabilities = [
     ["Accurate transcription", "Personalised speech-to-text for non-standard, dysarthric, accented, or fragmented speech."],
@@ -385,25 +379,22 @@ need it most.
                Echo is live in a small pilot capped at a maximum of 20 for this phase — a choice to prioritise depth of support over scale while unfunded. Our testers include a young man with a severe stammer from a low-income background, a user with mild speech differences from cerebral palsy, and an 11-year-old who is deaf, fitted with a cochlear implant at age five.
              </p>
              <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/72">
-               Every adapter trained also feeds back into improving the base model, so accuracy compounds over time.
+                Every user's model also improves the base system over time, so accuracy compounds for everyone.
              </p>
            </article>
 
-          <div className="grid gap-4">
-            {methods.map((method) => (
-              <article
-                key={method.title}
-                className="rounded-lg border border-gray-200/80 bg-white/90 p-6 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70"
-              >
-                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                  {method.title}
-                </h3>
-                <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/72">
-                  {method.desc}
-                </p>
-              </article>
-            ))}
-          </div>
+           <div>
+             <article
+               className="rounded-lg border border-gray-200/80 bg-white/90 p-6 shadow-sm dark:border-gray-700/70 dark:bg-gray-900/70"
+             >
+               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                 {method.title}
+               </h3>
+               <p className="mt-3 text-base leading-relaxed text-gray-600 dark:text-white/72">
+                 {method.desc}
+               </p>
+             </article>
+           </div>
         </div>
       </section>
 

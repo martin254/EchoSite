@@ -141,7 +141,7 @@ const App = () => {
     "/echo": {
       title: "Echo - Personalised ASR and AAC App for Non-Standard Speech",
       description:
-        "Echo is ISRI's personalised ASR engine and AAC app for voice AI accessibility, using per-user fine-tuning and LoRA adapters for people mainstream speech recognition fails.",
+        "Echo is ISRI's personalised speech technology for people with non-standard speech, building a small individual model for each user that's cheap to train and fast to serve.",
       path: "/echo",
     },
     "/pilot-program": {

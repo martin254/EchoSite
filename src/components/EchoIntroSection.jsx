@@ -7,7 +7,7 @@ const EchoIntroSection = ({ id, className = "" }) => {
       number: "01",
       title: "Your Voice, Your Model",
       desc:
-        "Echo builds a personalised ASR adapter unique to each user. As you speak, Echo learns your specific voice patterns, pronunciation, and rhythm, getting more accurate over time. No two Echo users share the same model. This is personalised speech AI at scale, starting in Kenya and built for Africa.",
+        "Echo builds a small, personalised model unique to each user. As you speak, Echo learns your specific voice patterns, pronunciation, and rhythm, getting more accurate over time. No two Echo users share the same model. This is personalised speech AI at scale, starting in Kenya and built for Africa.",
     },
     {
       number: "02",
@@ -19,7 +19,7 @@ const EchoIntroSection = ({ id, className = "" }) => {
       number: "03",
       title: "Trained on Real Non-Standard Speech",
       desc:
-        "Echo is powered by a Whisper-based model adapted with real recordings from people with speech impairments, including speakers with cerebral palsy, dysarthria, and non-standard Swahili and accented speech. In early testing, Echo has shown up to ~42% relative WER reduction (over 23 percentage points absolute) for individual cerebral-palsy speakers versus the non-personalised baseline.",
+        "Echo is trained on real recordings from people with speech impairments, including speakers with cerebral palsy, dysarthria, and non-standard Swahili and accented speech. In early testing, Echo has shown up to ~42% relative WER reduction (over 23 percentage points absolute) for individual cerebral-palsy speakers versus the non-personalised baseline.",
     },
     {
       number: "04",
