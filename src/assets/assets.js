@@ -29,6 +29,7 @@ import TwiProf from './TwiProf.png'
 import echohero from './Echohero.png'
 import gdidark from './gdihubdark.svg'
 import strathdark from './strathdarkness.png'
+import strathyadark from './strathyadark.png'
 import cdlilight from './cdlilogo.svg'
 import sautilogo from './ISRIforDark.png'
 import sautilight from './ISRIforLightbg.png'
@@ -61,8 +62,8 @@ export const company_logos = [
   },
   {
     name: 'Strathmore University',
-    light: strathlogo,
-    dark: strathdark
+    light: strathyadark,
+    dark: strathyadark
   },
   {
     name: 'Senses Hub',
