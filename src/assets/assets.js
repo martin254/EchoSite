@@ -35,7 +35,7 @@ import sautilight from './ISRIforLightbg.png'
 import AITutor from './AITutor.png'
 import echo2 from './Echo2.png'
 import echologo2 from './echologo2.png'
-import dictationStudio from './Dictation_Studio.png'
+import dictationStudio from './DictStudio.png'
 
 export const audioExamples = {
   user1: {
