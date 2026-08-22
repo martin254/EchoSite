@@ -126,8 +126,8 @@ const assets = {
 export default assets
 
 export const teamData = [
-  { name: 'Collins Njau', title: 'Founder and CTO', image: njauprof ,linkedin:'https://www.linkedin.com/in/collins-njau-294831a7/' },
   { name: 'Martin Muru', title: 'Co-founder and CEO', image: TwiProf, linkedin:'https://www.linkedin.com/in/martinmuru/' },
+  { name: 'Collins Njau', title: 'Co-founder and CTO', image: njauprof ,linkedin:'https://www.linkedin.com/in/collins-njau-294831a7/' },
   { name: 'Ruth Kamau ', title: 'Co-founder & Programmes Director', image: ruth, linkedin:'https://www.linkedin.com/in/ruth-kamau-b07399127/' },
   { name: 'Sheila Odhiambo', title: 'Technical Advisor, Programs & MEL', image: sheila, linkedin:'https://www.linkedin.com/in/sheila-odhiambo/' },
   { name: 'Daisy Langat', title: 'Head of User Trust & Engagement', image: daisy, linkedin:'https://www.linkedin.com/in/daisy-lang-at-a37083147/' },
