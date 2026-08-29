@@ -217,7 +217,7 @@ return (
           <ISRIStructure />
           <Partners theme={theme} />
           <CBOOverview />
-          <CBOFocusAreas />
+          {/* <CBOFocusAreas /> */}
           <Features />
           <OurWork />
           <Teams />
