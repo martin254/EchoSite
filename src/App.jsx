@@ -168,6 +168,19 @@ const App = () => {
     url: "https://www.isrinitiative.org/",
     email: "hello@isrinitiative.org",
     sameAs: ["https://www.linkedin.com/company/inclusive-speech-rights-initiative"],
+    location: [
+      {
+        "@type": "Place",
+        name: "UK Office",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "3 Centenary Square",
+          addressLocality: "Birmingham",
+          postalCode: "B1 2DR",
+          addressCountry: "GB",
+        },
+      },
+    ],
     description:
       "ISRI builds Africa-first personalised speech AI and assistive communication products for people with non-standard speech.",
   }

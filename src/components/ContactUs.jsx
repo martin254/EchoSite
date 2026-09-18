@@ -10,6 +10,40 @@ const getFormServiceConfig = () => ({
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(false)
+  const [activeMap, setActiveMap] = useState("kenya")
+
+  const locations = [
+    {
+      id: "kenya",
+      label: "Kenya",
+      name: "Nairobi, Kenya",
+      address: "Echo pilots and user research",
+      area: "Community partnerships, pilot deployments, and user research remain led on the ground in Kenya.",
+      mapSrc: "https://www.google.com/maps?q=Nairobi,+Kenya&output=embed",
+      mapTitle: "Map showing Nairobi, Kenya",
+    },
+    {
+      id: "uk",
+      label: "UK Office",
+      name: "The Exchange, University of Birmingham",
+      address: "3 Centenary Square, Birmingham, B1 2DR, United Kingdom",
+      shortAddress: "The Exchange, 3 Centenary Square, Birmingham, B1 2DR",
+      area: "Centenary Square, Birmingham city centre, directly opposite the Library of Birmingham.",
+      mapSrc: "https://www.google.com/maps?q=The+Exchange,+3+Centenary+Square,+Birmingham+B1+2DR&output=embed",
+      mapTitle: "Map showing The Exchange, University of Birmingham",
+      directionsUrl: "https://www.google.com/maps/search/?api=1&query=The+Exchange+3+Centenary+Square+Birmingham+B1+2DR",
+    },
+  ]
+
+  const gettingHere = [
+    ["Metro", 'the "Library" West Midlands Metro stop is directly in front of the building.'],
+    ["Train", "Birmingham New Street is about a 10 minute walk."],
+    ["Bus", "several routes serve Centenary Square, and the nearest stop is Baskerville House."],
+    ["Car", "there is no on site parking, and the building is inside Birmingham's Clean Air Zone. Visitors should use a nearby car park and check charges beforehand."],
+    ["Accessibility", "wheelchair users and people with limited mobility should use the North Entrance via Bridge Street."],
+  ]
+
+  const activeLocation = locations.find((location) => location.id === activeMap) || locations[0]
 
   const onSubmit = async (event) => {
     event.preventDefault()
@@ -53,7 +87,7 @@ const ContactUs = () => {
     },
     {
       label: "Location",
-      value: "Kenya & United Kingdom",
+      value: "Kenya and The Exchange, 3 Centenary Square, Birmingham, B1 2DR",
       href: null,
     },
   ]
@@ -79,7 +113,7 @@ const ContactUs = () => {
               Let's collaborate
             </h3>
             <p className="text-sm text-gray-600 dark:text-white/70 mb-8">
-              We respond to most messages within 24-48 hours.
+              We respond to most messages within 24 to 48 hours.
             </p>
 
             <div className="space-y-5">
@@ -111,7 +145,7 @@ const ContactUs = () => {
 
             <div className="mt-8 rounded-2xl border border-gray-200/60 dark:border-gray-700/50 bg-gray-50/50 dark:bg-gray-800/30 p-5">
               <p className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/50 mb-2">
-                Privacy-first
+                Privacy first
               </p>
               <p className="text-sm text-gray-600 dark:text-white/70">
                 We only use your details to respond. No spam, ever.
@@ -170,7 +204,7 @@ const ContactUs = () => {
 
               <div className="flex items-center justify-between pt-2">
                 <p className="text-xs text-gray-500 dark:text-white/50">
-                  We'll reply within 24-48 hours.
+                  We'll reply within 24 to 48 hours.
                 </p>
 
                 <button
@@ -190,6 +224,99 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+
+      <section className="w-full max-w-6xl rounded-[1.75rem] border border-gray-200/60 dark:border-gray-700/50 bg-white/80 dark:bg-gray-900/60 p-7 sm:p-8 shadow-lg shadow-gray-200/30 dark:shadow-none">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-wider text-primary mb-2">
+              Locations
+            </p>
+            <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
+              Find us at The Exchange
+            </h3>
+          </div>
+          <div className="inline-flex w-fit rounded-full border border-gray-200/70 bg-gray-50 p-1 dark:border-gray-700 dark:bg-gray-950/60">
+            {locations.map((location) => (
+              <button
+                key={location.id}
+                type="button"
+                onClick={() => setActiveMap(location.id)}
+                className={`rounded-full px-4 py-2 text-sm font-medium transition ${
+                  activeMap === location.id
+                    ? "bg-primary text-white shadow-sm"
+                    : "text-gray-600 hover:text-primary dark:text-white/70"
+                }`}
+              >
+                {location.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-7 grid gap-5 lg:grid-cols-2">
+          {locations.map((location) => (
+            <article
+              key={location.id}
+              className="rounded-2xl border border-gray-200/70 bg-gray-50/70 p-5 dark:border-gray-700/60 dark:bg-gray-800/30"
+            >
+              <p className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/50">
+                {location.label}
+              </p>
+              <h4 className="mt-2 text-xl font-semibold text-gray-900 dark:text-white">
+                {location.name}
+              </h4>
+              <p className="mt-2 text-sm font-medium text-gray-700 dark:text-white/80">
+                {location.address}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-white/70">
+                {location.area}
+              </p>
+              {location.directionsUrl && (
+                <a
+                  href={location.directionsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex rounded-full bg-gray-900 px-5 py-2.5 text-sm font-medium text-white transition hover:scale-[1.02] hover:bg-primary dark:bg-white dark:text-gray-900 dark:hover:bg-primary dark:hover:text-white"
+                >
+                  Get directions
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-7 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="rounded-2xl border border-gray-200/70 bg-gray-50/70 p-5 dark:border-gray-700/60 dark:bg-gray-800/30">
+            <p className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-white/50">
+              Getting here
+            </p>
+            <h4 className="mt-2 text-xl font-semibold text-gray-900 dark:text-white">
+              UK Office
+            </h4>
+            <ol className="mt-4 space-y-3 text-sm leading-relaxed text-gray-600 dark:text-white/70">
+              {gettingHere.map(([mode, detail]) => (
+                <li key={mode}>
+                  <span className="font-semibold text-gray-900 dark:text-white">
+                    {mode}:
+                  </span>{" "}
+                  {detail}
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-gray-200/70 bg-gray-100 dark:border-gray-700/60 dark:bg-gray-950">
+            <iframe
+              title={activeLocation.mapTitle}
+              src={activeLocation.mapSrc}
+              className="h-[320px] w-full border-0 sm:h-[380px]"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

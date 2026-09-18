@@ -775,6 +775,7 @@ need it most.
                         title="Echo mobile demo video"
                         src="https://www.youtube.com/embed/T9FDwhzZFeY?rel=0&modestbranding=1&playsinline=1"
                         className="h-full w-full"
+                        loading="lazy"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
                       />
@@ -811,6 +812,7 @@ need it most.
                               scrolling="no"
                               frameBorder="no"
                               allow="autoplay"
+                              loading="lazy"
                               src={user.before}
                             />
                           </div>
@@ -835,6 +837,7 @@ need it most.
                               scrolling="no"
                               frameBorder="no"
                               allow="autoplay"
+                              loading="lazy"
                               src={user.after}
                             />
                           </div>
