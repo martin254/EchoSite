@@ -19,14 +19,14 @@ const ISRIStructure = () => {
     {
       icon: "UK",
       title: "ISRI UK Limited",
-      subtitle: "Limited Company - United Kingdom",
+      subtitle: "UK Office, The Exchange, 3 Centenary Square, Birmingham, B1 2DR",
       body:
-        "ISRI UK Limited is our newly registered UK entity, anchoring our international fundraising, research partnerships, accelerator engagements, and institutional relationships. Registered in 2026, ISRI UK enables us to access UK and international funding mechanisms and represent ISRI's mission on the global stage.",
+        "ISRI UK Limited is our newly registered UK entity, anchoring our international fundraising, research partnerships, accelerator engagements, and institutional relationships. Find us at The Exchange as we build UK and international funding relationships and represent ISRI's mission on the global stage.",
       tags: [
         "International Fundraising",
         "Research Partnerships",
         "Accelerator Engagements",
-        "UK & Global Operations",
+        "UK and Global Operations",
       ],
     },
   ]

@@ -27,12 +27,12 @@ const Footer = ({ theme }) => {
           />
 
           <p className="text-sm opacity-80">
-            Inclusive Speech Rights Initiative (ISRI) - inclusive communication, without barriers.
-            Building ethical, community-rooted speech AI across Kenya and the United Kingdom.
+            Inclusive Speech Rights Initiative (ISRI), inclusive communication, without barriers.
+            Building ethical, community-rooted speech AI across Kenya and the UK.
           </p>
 
           <p className="text-xs opacity-60">
-            Kenya (Echo pilots and user research) - United Kingdom (international operations)
+            Kenya, Echo pilots and user research. UK Office, The Exchange, 3 Centenary Square, Birmingham, B1 2DR.
           </p>
 
           <ul className="flex gap-6 text-sm pt-2">
@@ -79,7 +79,7 @@ const Footer = ({ theme }) => {
 
       <div className="flex flex-wrap items-center justify-between gap-4 text-xs opacity-60">
         <p>
-          Copyright 2026 Inclusive Speech Rights Initiative - All rights reserved.
+          Copyright 2026 Inclusive Speech Rights Initiative, All rights reserved.
         </p>
 
         <div className="flex gap-4">
